@@ -40,7 +40,7 @@ class TabbarVC: UITabBarController, UITabBarControllerDelegate {
         }()
         
         guard
-            let index = tabBar.items?.index(of: item),
+            let index = tabBar.items?.firstIndex(of: item),
             let subview = orderedTabBarItemViews[index].subviews.first
             else {
                 return

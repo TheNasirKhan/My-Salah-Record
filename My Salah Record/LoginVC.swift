@@ -14,13 +14,28 @@ import Firebase
 class LoginVC: UIViewController {
     
     @IBOutlet weak var txt_phone: UITextField!
+    @IBOutlet weak var btn_login: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        btn_login.layer.cornerRadius = btn_login.bounds.height / 2
+        
+        txt_phone.attributedPlaceholder = NSAttributedString(string: "Phone Number",
+                                                               attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.3)])
+        
+       
+        
         let dismissKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         dismissKeyboardGesture.cancelsTouchesInView = false
         self.view.addGestureRecognizer(dismissKeyboardGesture)
+        
+        let code = UserDefaults.standard.string(forKey: "authVerificationID")
+        print(code)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
     }
     
@@ -69,25 +84,42 @@ class LoginVC: UIViewController {
                 self.popUp(message: error.localizedDescription)
                 return
             } else {
-                UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
             }
+            
             // Sign in using the verificationID and the code sent to the user
-            // ...
             
-            let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")
+            UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
             
-            let credential = PhoneAuthProvider.provider().credential(
-                withVerificationID: verificationID ?? "",
-                verificationCode: verificationID ?? "")
-            
-            Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
-                if let error = error {
-                    // ...
-                    return
+            let alertController = UIAlertController(title: "Verification", message: "Enter Verification code send on your mobile", preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Verify", style: .default, handler: { alert -> Void in
+                let textField = alertController.textFields![0] as UITextField
+                // do something with textField
+                
+                let verificationID = UserDefaults.standard.string(forKey: "authVerificationID")
+                
+                let credential = PhoneAuthProvider.provider().credential(
+                    withVerificationID: verificationID ?? "",
+                    verificationCode: textField.text ?? "")
+                
+                Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
+                    if let error = error {
+                        self.popUp(message: error.localizedDescription)
+                        return
+                    }
+                    // User is signed in
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "Dashboard", sender: nil)
+                    }
                 }
-                // User is signed in
-                // ...
-            }
+                
+                
+            }))
+            alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+            alertController.addTextField(configurationHandler: {(textField : UITextField!) -> Void in
+                textField.placeholder = "Verification code"
+            })
+            self.present(alertController, animated: true, completion: nil)
+            
             
         }
         
@@ -98,3 +130,4 @@ class LoginVC: UIViewController {
     
     
 }
+

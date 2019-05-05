@@ -57,7 +57,7 @@ class FirebaseFetcher {
     }
     
     
-    func authUser(completion: @escaping ([QueryDocumentSnapshot]?) -> ()) {
+    func authAnonymous(completion: @escaping ([QueryDocumentSnapshot]?) -> ()) {
         
         Auth.auth().signInAnonymously() { (authResult, error) in
             // ...
@@ -79,6 +79,12 @@ class FirebaseFetcher {
             
             
         }
+        
+    }
+    
+    func authByNumber(phone: String, completion: @escaping ([QueryDocumentSnapshot]?) -> ()) {
+        
+        
         
     }
     
