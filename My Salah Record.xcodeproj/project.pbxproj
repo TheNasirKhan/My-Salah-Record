@@ -1,0 +1,964 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		40C636714FA959B7229CAFA2 /* Pods_My_Salah_RecordUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0130D5214EEFBF129EECE0 /* Pods_My_Salah_RecordUITests.framework */; };
+		8814145A219A2CF70048303B /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88141459219A2CF70048303B /* TabbarVC.swift */; };
+		889722CC219B6D68008588E3 /* TopPerformersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889722CB219B6D68008588E3 /* TopPerformersCell.swift */; };
+		88AE46F22199D49600F2EF7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE46F12199D49600F2EF7B /* AppDelegate.swift */; };
+		88AE46F72199D49600F2EF7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AE46F52199D49600F2EF7B /* Main.storyboard */; };
+		88AE46FA2199D49600F2EF7B /* My_Salah_Record.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 88AE46F82199D49600F2EF7B /* My_Salah_Record.xcdatamodeld */; };
+		88AE46FC2199D49800F2EF7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88AE46FB2199D49800F2EF7B /* Assets.xcassets */; };
+		88AE46FF2199D49800F2EF7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AE46FD2199D49800F2EF7B /* LaunchScreen.storyboard */; };
+		88AE470A2199D49800F2EF7B /* My_Salah_RecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE47092199D49800F2EF7B /* My_Salah_RecordTests.swift */; };
+		88AE47152199D49800F2EF7B /* My_Salah_RecordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE47142199D49800F2EF7B /* My_Salah_RecordUITests.swift */; };
+		88AE47232199D67C00F2EF7B /* dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AE47222199D67C00F2EF7B /* dp.png */; };
+		88E302DA2248A91900E739DA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E302D92248A91900E739DA /* UIViewController+Extension.swift */; };
+		88EBD712223A21D600D66121 /* FirebaseFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD711223A21D600D66121 /* FirebaseFetcher.swift */; };
+		88EBD714223A2BBF00D66121 /* TodayVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */; };
+		88EBD716223A2C9D00D66121 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD715223A2C9D00D66121 /* User.swift */; };
+		88F220FB2238EF1E00309F72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88F220FA2238EF1E00309F72 /* GoogleService-Info.plist */; };
+		88F3438B219C5CB7004FC1DA /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F1F219B187A007280F1 /* Poppins-Black.ttf */; };
+		88F3438C219C5CB7004FC1DA /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F1D219B1878007280F1 /* Poppins-BlackItalic.ttf */; };
+		88F3438D219C5CB7004FC1DA /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F22219B187C007280F1 /* Poppins-Bold.ttf */; };
+		88F3438E219C5CB7004FC1DA /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F18219B1875007280F1 /* Poppins-BoldItalic.ttf */; };
+		88F3438F219C5CB7004FC1DA /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F20219B187A007280F1 /* Poppins-ExtraBold.ttf */; };
+		88F34390219C5CB7004FC1DA /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F1B219B1877007280F1 /* Poppins-ExtraBoldItalic.ttf */; };
+		88F34391219C5CB7004FC1DA /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F14219B1872007280F1 /* Poppins-ExtraLight.ttf */; };
+		88F34392219C5CB7004FC1DA /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F15219B1873007280F1 /* Poppins-ExtraLightItalic.ttf */; };
+		88F34393219C5CB7004FC1DA /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F11219B1870007280F1 /* Poppins-Italic.ttf */; };
+		88F34394219C5CB7004FC1DA /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F16219B1873007280F1 /* Poppins-Light.ttf */; };
+		88F34395219C5CB7004FC1DA /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F1E219B1879007280F1 /* Poppins-LightItalic.ttf */; };
+		88F34396219C5CB7004FC1DA /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F1A219B1876007280F1 /* Poppins-Medium.ttf */; };
+		88F34397219C5CB7004FC1DA /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F17219B1874007280F1 /* Poppins-MediumItalic.ttf */; };
+		88F34398219C5CB7004FC1DA /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F12219B1870007280F1 /* Poppins-Regular.ttf */; };
+		88F34399219C5CB7004FC1DA /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F19219B1875007280F1 /* Poppins-SemiBold.ttf */; };
+		88F3439A219C5CB7004FC1DA /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F21219B187B007280F1 /* Poppins-SemiBoldItalic.ttf */; };
+		88F3439B219C5CB7004FC1DA /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F13219B1871007280F1 /* Poppins-Thin.ttf */; };
+		88F3439C219C5CB7004FC1DA /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F1C219B1878007280F1 /* Poppins-ThinItalic.ttf */; };
+		88F3439E219C64BA004FC1DA /* CalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3439D219C64BA004FC1DA /* CalenderVC.swift */; };
+		88F343A0219C6666004FC1DA /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3439F219C6666004FC1DA /* CalenderCell.swift */; };
+		88F3C12221A0043D008A46EB /* DatePickerTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3C12121A0043D008A46EB /* DatePickerTextFieldView.swift */; };
+		88F3C12421A00C6F008A46EB /* QazaCounterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3C12321A00C6F008A46EB /* QazaCounterCell.swift */; };
+		88F3C12621A00C9D008A46EB /* QazaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3C12521A00C9D008A46EB /* QazaVC.swift */; };
+		88F6CFEE22392C1000D1E450 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6CFED22392C1000D1E450 /* LoginVC.swift */; };
+		88F84F08219B01C3007280F1 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F07219B01C3007280F1 /* TodayVC.swift */; };
+		88F84F0C219B03E2007280F1 /* WeeklyTopPerformers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F0B219B03E2007280F1 /* WeeklyTopPerformers.swift */; };
+		88F84F0E219B0A85007280F1 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F0D219B0A84007280F1 /* GlobalVariables.swift */; };
+		88F84F24219B1B44007280F1 /* SalahTimingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F23219B1B44007280F1 /* SalahTimingCell.swift */; };
+		88F84F26219B2759007280F1 /* TopPerformersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F25219B2759007280F1 /* TopPerformersVC.swift */; };
+		BA636D897D066A3095CECCF6 /* Pods_My_Salah_Record.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B21DB4A658894C478EDA75CA /* Pods_My_Salah_Record.framework */; };
+		E623B6A2C8875E920AC326DC /* Pods_My_Salah_RecordTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4478F1F56D9B18D4FB886BEA /* Pods_My_Salah_RecordTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88AE47062199D49800F2EF7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88AE46E62199D49600F2EF7B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88AE46ED2199D49600F2EF7B;
+			remoteInfo = "My Salah Record";
+		};
+		88AE47112199D49800F2EF7B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88AE46E62199D49600F2EF7B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88AE46ED2199D49600F2EF7B;
+			remoteInfo = "My Salah Record";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		003ACA1A5CAC49154B654232 /* Pods-My Salah RecordUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah RecordUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah RecordUITests/Pods-My Salah RecordUITests.release.xcconfig"; sourceTree = "<group>"; };
+		10E57324E277B19DC4B5D010 /* Pods-My Salah Record.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah Record.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah Record/Pods-My Salah Record.debug.xcconfig"; sourceTree = "<group>"; };
+		160440C389FE3CCE91D7F5CA /* Pods-My Salah RecordTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah RecordTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah RecordTests/Pods-My Salah RecordTests.release.xcconfig"; sourceTree = "<group>"; };
+		1862ACB16BCAE26B7A8F96EF /* Pods-My Salah RecordUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah RecordUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah RecordUITests/Pods-My Salah RecordUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		4478F1F56D9B18D4FB886BEA /* Pods_My_Salah_RecordTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Salah_RecordTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		489F9C86B9550E455A112D8A /* Pods-My Salah RecordTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah RecordTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah RecordTests/Pods-My Salah RecordTests.debug.xcconfig"; sourceTree = "<group>"; };
+		88141459219A2CF70048303B /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		889722CB219B6D68008588E3 /* TopPerformersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPerformersCell.swift; sourceTree = "<group>"; };
+		88AE46EE2199D49600F2EF7B /* My Salah Record.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Salah Record.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88AE46F12199D49600F2EF7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		88AE46F62199D49600F2EF7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		88AE46F92199D49600F2EF7B /* My_Salah_Record.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = My_Salah_Record.xcdatamodel; sourceTree = "<group>"; };
+		88AE46FB2199D49800F2EF7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88AE46FE2199D49800F2EF7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		88AE47002199D49800F2EF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88AE47052199D49800F2EF7B /* My Salah RecordTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Salah RecordTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88AE47092199D49800F2EF7B /* My_Salah_RecordTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Salah_RecordTests.swift; sourceTree = "<group>"; };
+		88AE470B2199D49800F2EF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88AE47102199D49800F2EF7B /* My Salah RecordUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "My Salah RecordUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88AE47142199D49800F2EF7B /* My_Salah_RecordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Salah_RecordUITests.swift; sourceTree = "<group>"; };
+		88AE47162199D49800F2EF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88AE47222199D67C00F2EF7B /* dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dp.png; sourceTree = "<group>"; };
+		88E302D92248A91900E739DA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		88EBD711223A21D600D66121 /* FirebaseFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFetcher.swift; sourceTree = "<group>"; };
+		88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodayVC+extension.swift"; sourceTree = "<group>"; };
+		88EBD715223A2C9D00D66121 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		88F220FA2238EF1E00309F72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		88F220FC2238F0F900309F72 /* My Salah Record.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "My Salah Record.entitlements"; sourceTree = "<group>"; };
+		88F3439D219C64BA004FC1DA /* CalenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderVC.swift; sourceTree = "<group>"; };
+		88F3439F219C6666004FC1DA /* CalenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
+		88F3C12121A0043D008A46EB /* DatePickerTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTextFieldView.swift; sourceTree = "<group>"; };
+		88F3C12321A00C6F008A46EB /* QazaCounterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaCounterCell.swift; sourceTree = "<group>"; };
+		88F3C12521A00C9D008A46EB /* QazaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaVC.swift; sourceTree = "<group>"; };
+		88F6CFED22392C1000D1E450 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		88F84F07219B01C3007280F1 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
+		88F84F0B219B03E2007280F1 /* WeeklyTopPerformers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyTopPerformers.swift; sourceTree = "<group>"; };
+		88F84F0D219B0A84007280F1 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
+		88F84F11219B1870007280F1 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		88F84F12219B1870007280F1 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		88F84F13219B1871007280F1 /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		88F84F14219B1872007280F1 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		88F84F15219B1873007280F1 /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		88F84F16219B1873007280F1 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		88F84F17219B1874007280F1 /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		88F84F18219B1875007280F1 /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		88F84F19219B1875007280F1 /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		88F84F1A219B1876007280F1 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		88F84F1B219B1877007280F1 /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		88F84F1C219B1878007280F1 /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		88F84F1D219B1878007280F1 /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		88F84F1E219B1879007280F1 /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		88F84F1F219B187A007280F1 /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		88F84F20219B187A007280F1 /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		88F84F21219B187B007280F1 /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		88F84F22219B187C007280F1 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		88F84F23219B1B44007280F1 /* SalahTimingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalahTimingCell.swift; sourceTree = "<group>"; };
+		88F84F25219B2759007280F1 /* TopPerformersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPerformersVC.swift; sourceTree = "<group>"; };
+		9A0130D5214EEFBF129EECE0 /* Pods_My_Salah_RecordUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Salah_RecordUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B21DB4A658894C478EDA75CA /* Pods_My_Salah_Record.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Salah_Record.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E28417A33456AE0F02DA9D45 /* Pods-My Salah Record.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah Record.release.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah Record/Pods-My Salah Record.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88AE46EB2199D49600F2EF7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BA636D897D066A3095CECCF6 /* Pods_My_Salah_Record.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88AE47022199D49800F2EF7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E623B6A2C8875E920AC326DC /* Pods_My_Salah_RecordTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88AE470D2199D49800F2EF7B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40C636714FA959B7229CAFA2 /* Pods_My_Salah_RecordUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2ABADB55D8DC94E73F5CC5F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				10E57324E277B19DC4B5D010 /* Pods-My Salah Record.debug.xcconfig */,
+				E28417A33456AE0F02DA9D45 /* Pods-My Salah Record.release.xcconfig */,
+				489F9C86B9550E455A112D8A /* Pods-My Salah RecordTests.debug.xcconfig */,
+				160440C389FE3CCE91D7F5CA /* Pods-My Salah RecordTests.release.xcconfig */,
+				1862ACB16BCAE26B7A8F96EF /* Pods-My Salah RecordUITests.debug.xcconfig */,
+				003ACA1A5CAC49154B654232 /* Pods-My Salah RecordUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		395DDCB115B27ABB5DFDA79C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B21DB4A658894C478EDA75CA /* Pods_My_Salah_Record.framework */,
+				4478F1F56D9B18D4FB886BEA /* Pods_My_Salah_RecordTests.framework */,
+				9A0130D5214EEFBF129EECE0 /* Pods_My_Salah_RecordUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88AE46E52199D49600F2EF7B = {
+			isa = PBXGroup;
+			children = (
+				88AE46F02199D49600F2EF7B /* My Salah Record */,
+				88AE47082199D49800F2EF7B /* My Salah RecordTests */,
+				88AE47132199D49800F2EF7B /* My Salah RecordUITests */,
+				88AE46EF2199D49600F2EF7B /* Products */,
+				2ABADB55D8DC94E73F5CC5F5 /* Pods */,
+				395DDCB115B27ABB5DFDA79C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		88AE46EF2199D49600F2EF7B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88AE46EE2199D49600F2EF7B /* My Salah Record.app */,
+				88AE47052199D49800F2EF7B /* My Salah RecordTests.xctest */,
+				88AE47102199D49800F2EF7B /* My Salah RecordUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88AE46F02199D49600F2EF7B /* My Salah Record */ = {
+			isa = PBXGroup;
+			children = (
+				88F220FC2238F0F900309F72 /* My Salah Record.entitlements */,
+				88AE47222199D67C00F2EF7B /* dp.png */,
+				88AE46F12199D49600F2EF7B /* AppDelegate.swift */,
+				88F84F0D219B0A84007280F1 /* GlobalVariables.swift */,
+				88E302D82248A8F800E739DA /* Utilities */,
+				88EBD710223A21B100D66121 /* Fetcher */,
+				88EBD70F223A21A800D66121 /* Models */,
+				88F84F0F219B184D007280F1 /* Fonts */,
+				88F84F0A219B03A6007280F1 /* Custom Cells */,
+				88F84F09219B01CB007280F1 /* TabbarVCs */,
+				88F6CFED22392C1000D1E450 /* LoginVC.swift */,
+				88141459219A2CF70048303B /* TabbarVC.swift */,
+				88AE46F52199D49600F2EF7B /* Main.storyboard */,
+				88AE46FB2199D49800F2EF7B /* Assets.xcassets */,
+				88AE46FD2199D49800F2EF7B /* LaunchScreen.storyboard */,
+				88AE47002199D49800F2EF7B /* Info.plist */,
+				88F220FA2238EF1E00309F72 /* GoogleService-Info.plist */,
+				88AE46F82199D49600F2EF7B /* My_Salah_Record.xcdatamodeld */,
+			);
+			path = "My Salah Record";
+			sourceTree = "<group>";
+		};
+		88AE47082199D49800F2EF7B /* My Salah RecordTests */ = {
+			isa = PBXGroup;
+			children = (
+				88AE47092199D49800F2EF7B /* My_Salah_RecordTests.swift */,
+				88AE470B2199D49800F2EF7B /* Info.plist */,
+			);
+			path = "My Salah RecordTests";
+			sourceTree = "<group>";
+		};
+		88AE47132199D49800F2EF7B /* My Salah RecordUITests */ = {
+			isa = PBXGroup;
+			children = (
+				88AE47142199D49800F2EF7B /* My_Salah_RecordUITests.swift */,
+				88AE47162199D49800F2EF7B /* Info.plist */,
+			);
+			path = "My Salah RecordUITests";
+			sourceTree = "<group>";
+		};
+		88E302D82248A8F800E739DA /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				88E302D92248A91900E739DA /* UIViewController+Extension.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		88EBD70F223A21A800D66121 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				88EBD715223A2C9D00D66121 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		88EBD710223A21B100D66121 /* Fetcher */ = {
+			isa = PBXGroup;
+			children = (
+				88EBD711223A21D600D66121 /* FirebaseFetcher.swift */,
+			);
+			path = Fetcher;
+			sourceTree = "<group>";
+		};
+		88F84F09219B01CB007280F1 /* TabbarVCs */ = {
+			isa = PBXGroup;
+			children = (
+				88F84F07219B01C3007280F1 /* TodayVC.swift */,
+				88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */,
+				88F84F25219B2759007280F1 /* TopPerformersVC.swift */,
+				88F3439D219C64BA004FC1DA /* CalenderVC.swift */,
+				88F3C12521A00C9D008A46EB /* QazaVC.swift */,
+			);
+			path = TabbarVCs;
+			sourceTree = "<group>";
+		};
+		88F84F0A219B03A6007280F1 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				88F84F0B219B03E2007280F1 /* WeeklyTopPerformers.swift */,
+				88F84F23219B1B44007280F1 /* SalahTimingCell.swift */,
+				889722CB219B6D68008588E3 /* TopPerformersCell.swift */,
+				88F3C12121A0043D008A46EB /* DatePickerTextFieldView.swift */,
+				88F3C12321A00C6F008A46EB /* QazaCounterCell.swift */,
+				88F3439F219C6666004FC1DA /* CalenderCell.swift */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		88F84F0F219B184D007280F1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				88F84F10219B185E007280F1 /* poppin */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		88F84F10219B185E007280F1 /* poppin */ = {
+			isa = PBXGroup;
+			children = (
+				88F84F1F219B187A007280F1 /* Poppins-Black.ttf */,
+				88F84F1D219B1878007280F1 /* Poppins-BlackItalic.ttf */,
+				88F84F22219B187C007280F1 /* Poppins-Bold.ttf */,
+				88F84F18219B1875007280F1 /* Poppins-BoldItalic.ttf */,
+				88F84F20219B187A007280F1 /* Poppins-ExtraBold.ttf */,
+				88F84F1B219B1877007280F1 /* Poppins-ExtraBoldItalic.ttf */,
+				88F84F14219B1872007280F1 /* Poppins-ExtraLight.ttf */,
+				88F84F15219B1873007280F1 /* Poppins-ExtraLightItalic.ttf */,
+				88F84F11219B1870007280F1 /* Poppins-Italic.ttf */,
+				88F84F16219B1873007280F1 /* Poppins-Light.ttf */,
+				88F84F1E219B1879007280F1 /* Poppins-LightItalic.ttf */,
+				88F84F1A219B1876007280F1 /* Poppins-Medium.ttf */,
+				88F84F17219B1874007280F1 /* Poppins-MediumItalic.ttf */,
+				88F84F12219B1870007280F1 /* Poppins-Regular.ttf */,
+				88F84F19219B1875007280F1 /* Poppins-SemiBold.ttf */,
+				88F84F21219B187B007280F1 /* Poppins-SemiBoldItalic.ttf */,
+				88F84F13219B1871007280F1 /* Poppins-Thin.ttf */,
+				88F84F1C219B1878007280F1 /* Poppins-ThinItalic.ttf */,
+			);
+			path = poppin;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88AE46ED2199D49600F2EF7B /* My Salah Record */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88AE47192199D49800F2EF7B /* Build configuration list for PBXNativeTarget "My Salah Record" */;
+			buildPhases = (
+				E9A0DE6BE1D459AA05392F55 /* [CP] Check Pods Manifest.lock */,
+				88AE46EA2199D49600F2EF7B /* Sources */,
+				88AE46EB2199D49600F2EF7B /* Frameworks */,
+				88AE46EC2199D49600F2EF7B /* Resources */,
+				1093ACB55F24C03815D44E29 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "My Salah Record";
+			productName = "My Salah Record";
+			productReference = 88AE46EE2199D49600F2EF7B /* My Salah Record.app */;
+			productType = "com.apple.product-type.application";
+		};
+		88AE47042199D49800F2EF7B /* My Salah RecordTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88AE471C2199D49800F2EF7B /* Build configuration list for PBXNativeTarget "My Salah RecordTests" */;
+			buildPhases = (
+				F57711EDA5C111FFE8E95377 /* [CP] Check Pods Manifest.lock */,
+				88AE47012199D49800F2EF7B /* Sources */,
+				88AE47022199D49800F2EF7B /* Frameworks */,
+				88AE47032199D49800F2EF7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88AE47072199D49800F2EF7B /* PBXTargetDependency */,
+			);
+			name = "My Salah RecordTests";
+			productName = "My Salah RecordTests";
+			productReference = 88AE47052199D49800F2EF7B /* My Salah RecordTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		88AE470F2199D49800F2EF7B /* My Salah RecordUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88AE471F2199D49800F2EF7B /* Build configuration list for PBXNativeTarget "My Salah RecordUITests" */;
+			buildPhases = (
+				9061FED53BCBE369A10986A2 /* [CP] Check Pods Manifest.lock */,
+				88AE470C2199D49800F2EF7B /* Sources */,
+				88AE470D2199D49800F2EF7B /* Frameworks */,
+				88AE470E2199D49800F2EF7B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88AE47122199D49800F2EF7B /* PBXTargetDependency */,
+			);
+			name = "My Salah RecordUITests";
+			productName = "My Salah RecordUITests";
+			productReference = 88AE47102199D49800F2EF7B /* My Salah RecordUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88AE46E62199D49600F2EF7B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0940;
+				LastUpgradeCheck = 0940;
+				ORGANIZATIONNAME = Techwisely;
+				TargetAttributes = {
+					88AE46ED2199D49600F2EF7B = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+					88AE47042199D49800F2EF7B = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 88AE46ED2199D49600F2EF7B;
+					};
+					88AE470F2199D49800F2EF7B = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 88AE46ED2199D49600F2EF7B;
+					};
+				};
+			};
+			buildConfigurationList = 88AE46E92199D49600F2EF7B /* Build configuration list for PBXProject "My Salah Record" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88AE46E52199D49600F2EF7B;
+			productRefGroup = 88AE46EF2199D49600F2EF7B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88AE46ED2199D49600F2EF7B /* My Salah Record */,
+				88AE47042199D49800F2EF7B /* My Salah RecordTests */,
+				88AE470F2199D49800F2EF7B /* My Salah RecordUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88AE46EC2199D49600F2EF7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88F34392219C5CB7004FC1DA /* Poppins-ExtraLightItalic.ttf in Resources */,
+				88F34395219C5CB7004FC1DA /* Poppins-LightItalic.ttf in Resources */,
+				88AE46FF2199D49800F2EF7B /* LaunchScreen.storyboard in Resources */,
+				88F3439C219C5CB7004FC1DA /* Poppins-ThinItalic.ttf in Resources */,
+				88F34398219C5CB7004FC1DA /* Poppins-Regular.ttf in Resources */,
+				88F3438F219C5CB7004FC1DA /* Poppins-ExtraBold.ttf in Resources */,
+				88F3439A219C5CB7004FC1DA /* Poppins-SemiBoldItalic.ttf in Resources */,
+				88F34399219C5CB7004FC1DA /* Poppins-SemiBold.ttf in Resources */,
+				88AE47232199D67C00F2EF7B /* dp.png in Resources */,
+				88F34396219C5CB7004FC1DA /* Poppins-Medium.ttf in Resources */,
+				88F3438D219C5CB7004FC1DA /* Poppins-Bold.ttf in Resources */,
+				88F34390219C5CB7004FC1DA /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				88AE46FC2199D49800F2EF7B /* Assets.xcassets in Resources */,
+				88F34394219C5CB7004FC1DA /* Poppins-Light.ttf in Resources */,
+				88F34393219C5CB7004FC1DA /* Poppins-Italic.ttf in Resources */,
+				88F34397219C5CB7004FC1DA /* Poppins-MediumItalic.ttf in Resources */,
+				88F3439B219C5CB7004FC1DA /* Poppins-Thin.ttf in Resources */,
+				88AE46F72199D49600F2EF7B /* Main.storyboard in Resources */,
+				88F34391219C5CB7004FC1DA /* Poppins-ExtraLight.ttf in Resources */,
+				88F220FB2238EF1E00309F72 /* GoogleService-Info.plist in Resources */,
+				88F3438C219C5CB7004FC1DA /* Poppins-BlackItalic.ttf in Resources */,
+				88F3438B219C5CB7004FC1DA /* Poppins-Black.ttf in Resources */,
+				88F3438E219C5CB7004FC1DA /* Poppins-BoldItalic.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88AE47032199D49800F2EF7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88AE470E2199D49800F2EF7B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1093ACB55F24C03815D44E29 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-My Salah Record/Pods-My Salah Record-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-ProtoRPC/ProtoRPC.framework",
+				"${BUILT_PRODUCTS_DIR}/gRPC-RxLibrary/RxLibrary.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpc.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ProtoRPC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxLibrary.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-My Salah Record/Pods-My Salah Record-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9061FED53BCBE369A10986A2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My Salah RecordUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9A0DE6BE1D459AA05392F55 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My Salah Record-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F57711EDA5C111FFE8E95377 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-My Salah RecordTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88AE46EA2199D49600F2EF7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88F3C12221A0043D008A46EB /* DatePickerTextFieldView.swift in Sources */,
+				88F84F08219B01C3007280F1 /* TodayVC.swift in Sources */,
+				88EBD712223A21D600D66121 /* FirebaseFetcher.swift in Sources */,
+				88F84F24219B1B44007280F1 /* SalahTimingCell.swift in Sources */,
+				88F84F0E219B0A85007280F1 /* GlobalVariables.swift in Sources */,
+				889722CC219B6D68008588E3 /* TopPerformersCell.swift in Sources */,
+				88F3C12621A00C9D008A46EB /* QazaVC.swift in Sources */,
+				88E302DA2248A91900E739DA /* UIViewController+Extension.swift in Sources */,
+				88F84F0C219B03E2007280F1 /* WeeklyTopPerformers.swift in Sources */,
+				88F84F26219B2759007280F1 /* TopPerformersVC.swift in Sources */,
+				88F3C12421A00C6F008A46EB /* QazaCounterCell.swift in Sources */,
+				88AE46F22199D49600F2EF7B /* AppDelegate.swift in Sources */,
+				88F343A0219C6666004FC1DA /* CalenderCell.swift in Sources */,
+				8814145A219A2CF70048303B /* TabbarVC.swift in Sources */,
+				88F3439E219C64BA004FC1DA /* CalenderVC.swift in Sources */,
+				88EBD716223A2C9D00D66121 /* User.swift in Sources */,
+				88AE46FA2199D49600F2EF7B /* My_Salah_Record.xcdatamodeld in Sources */,
+				88EBD714223A2BBF00D66121 /* TodayVC+extension.swift in Sources */,
+				88F6CFEE22392C1000D1E450 /* LoginVC.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88AE47012199D49800F2EF7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88AE470A2199D49800F2EF7B /* My_Salah_RecordTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88AE470C2199D49800F2EF7B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88AE47152199D49800F2EF7B /* My_Salah_RecordUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88AE47072199D49800F2EF7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88AE46ED2199D49600F2EF7B /* My Salah Record */;
+			targetProxy = 88AE47062199D49800F2EF7B /* PBXContainerItemProxy */;
+		};
+		88AE47122199D49800F2EF7B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88AE46ED2199D49600F2EF7B /* My Salah Record */;
+			targetProxy = 88AE47112199D49800F2EF7B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		88AE46F52199D49600F2EF7B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88AE46F62199D49600F2EF7B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		88AE46FD2199D49800F2EF7B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88AE46FE2199D49800F2EF7B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88AE47172199D49800F2EF7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		88AE47182199D49800F2EF7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88AE471A2199D49800F2EF7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10E57324E277B19DC4B5D010 /* Pods-My Salah Record.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "My Salah Record/My Salah Record.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3B8S47Y55A;
+				INFOPLIST_FILE = "My Salah Record/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nketc.My-Salah-Record";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88AE471B2199D49800F2EF7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E28417A33456AE0F02DA9D45 /* Pods-My Salah Record.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "My Salah Record/My Salah Record.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3B8S47Y55A;
+				INFOPLIST_FILE = "My Salah Record/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.nketc.My-Salah-Record";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		88AE471D2199D49800F2EF7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 489F9C86B9550E455A112D8A /* Pods-My Salah RecordTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3B8S47Y55A;
+				INFOPLIST_FILE = "My Salah RecordTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.techwisely.rapydjobs.My-Salah-RecordTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Salah Record.app/My Salah Record";
+			};
+			name = Debug;
+		};
+		88AE471E2199D49800F2EF7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 160440C389FE3CCE91D7F5CA /* Pods-My Salah RecordTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3B8S47Y55A;
+				INFOPLIST_FILE = "My Salah RecordTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.techwisely.rapydjobs.My-Salah-RecordTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/My Salah Record.app/My Salah Record";
+			};
+			name = Release;
+		};
+		88AE47202199D49800F2EF7B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1862ACB16BCAE26B7A8F96EF /* Pods-My Salah RecordUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3B8S47Y55A;
+				INFOPLIST_FILE = "My Salah RecordUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.techwisely.rapydjobs.My-Salah-RecordUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "My Salah Record";
+			};
+			name = Debug;
+		};
+		88AE47212199D49800F2EF7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 003ACA1A5CAC49154B654232 /* Pods-My Salah RecordUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 3B8S47Y55A;
+				INFOPLIST_FILE = "My Salah RecordUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.techwisely.rapydjobs.My-Salah-RecordUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "My Salah Record";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88AE46E92199D49600F2EF7B /* Build configuration list for PBXProject "My Salah Record" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88AE47172199D49800F2EF7B /* Debug */,
+				88AE47182199D49800F2EF7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88AE47192199D49800F2EF7B /* Build configuration list for PBXNativeTarget "My Salah Record" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88AE471A2199D49800F2EF7B /* Debug */,
+				88AE471B2199D49800F2EF7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88AE471C2199D49800F2EF7B /* Build configuration list for PBXNativeTarget "My Salah RecordTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88AE471D2199D49800F2EF7B /* Debug */,
+				88AE471E2199D49800F2EF7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88AE471F2199D49800F2EF7B /* Build configuration list for PBXNativeTarget "My Salah RecordUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88AE47202199D49800F2EF7B /* Debug */,
+				88AE47212199D49800F2EF7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		88AE46F82199D49600F2EF7B /* My_Salah_Record.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				88AE46F92199D49600F2EF7B /* My_Salah_Record.xcdatamodel */,
+			);
+			currentVersion = 88AE46F92199D49600F2EF7B /* My_Salah_Record.xcdatamodel */;
+			path = My_Salah_Record.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 88AE46E62199D49600F2EF7B /* Project object */;
+}

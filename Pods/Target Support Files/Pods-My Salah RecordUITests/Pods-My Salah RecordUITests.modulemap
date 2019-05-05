@@ -1,0 +1,6 @@
+framework module Pods_My_Salah_RecordUITests {
+  umbrella header "Pods-My Salah RecordUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
