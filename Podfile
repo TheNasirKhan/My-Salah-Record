@@ -11,6 +11,8 @@ target 'My Salah Record' do
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
   pod 'Toaster'
+  pod 'Former'
+  pod 'KeychainSwift'
 
 
   target 'My Salah RecordTests' do

@@ -46,7 +46,6 @@ class LoginVC: UIViewController {
     @IBAction func btn_skip(_ sender: UIButton) {
         
         Auth.auth().signInAnonymously() { (authResult, error) in
-            // ...
             
             if (error == nil) {
                 
@@ -57,14 +56,15 @@ class LoginVC: UIViewController {
                 print(uid)
                 print(isAnonymous)
                 
-                let firebaseFetcher = FirebaseFetcher()
+//                let firebaseFetcher = FirebaseFetcher()
                 
-                firebaseFetcher.addUser(userID: uid, completionHandler: { (data: DocumentReference?) in
-                    print(data?.documentID ?? 0)
-                })
+//                firebaseFetcher.addUser(userID: uid, completionHandler: { (data: DocumentReference?) in
+//                    print(data?.documentID ?? 0)
+//                })
                 
                 DispatchQueue.main.async {
-                    self.performSegue(withIdentifier: "Dashboard", sender: nil)
+//                    self.performSegue(withIdentifier: "Dashboard", sender: nil)
+                    self.performSegue(withIdentifier: "EditProfileVC", sender: nil)
                 }
                 
             } else {
@@ -106,6 +106,7 @@ class LoginVC: UIViewController {
                         self.popUp(message: error.localizedDescription)
                         return
                     }
+                    print(authResult?.user.phoneNumber)
                     // User is signed in
                     DispatchQueue.main.async {
                         self.performSegue(withIdentifier: "Dashboard", sender: nil)

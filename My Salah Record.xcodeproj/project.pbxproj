@@ -18,7 +18,14 @@
 		88AE470A2199D49800F2EF7B /* My_Salah_RecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE47092199D49800F2EF7B /* My_Salah_RecordTests.swift */; };
 		88AE47152199D49800F2EF7B /* My_Salah_RecordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE47142199D49800F2EF7B /* My_Salah_RecordUITests.swift */; };
 		88AE47232199D67C00F2EF7B /* dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AE47222199D67C00F2EF7B /* dp.png */; };
+		88DF9F782284B59A00865C71 /* AKPrayerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DF9F772284B59A00865C71 /* AKPrayerTime.swift */; };
 		88E302DA2248A91900E739DA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E302D92248A91900E739DA /* UIViewController+Extension.swift */; };
+		88E937AE22A49F4E00356C39 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937AD22A49F4E00356C39 /* EditProfileVC.swift */; };
+		88E937B322A4AA4B00356C39 /* String+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937B122A4AA4A00356C39 /* String+FormerDemo.swift */; };
+		88E937B422A4AA4B00356C39 /* UIColor+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937B222A4AA4B00356C39 /* UIColor+FormerDemo.swift */; };
+		88E937B622A4AC6300356C39 /* ProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937B522A4AC6200356C39 /* ProfileImageCell.swift */; };
+		88E937B822A4AC6D00356C39 /* ProfileImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E937B722A4AC6D00356C39 /* ProfileImageCell.xib */; };
+		88E937BA22A4AC8200356C39 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937B922A4AC8200356C39 /* Profile.swift */; };
 		88EBD712223A21D600D66121 /* FirebaseFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD711223A21D600D66121 /* FirebaseFetcher.swift */; };
 		88EBD714223A2BBF00D66121 /* TodayVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */; };
 		88EBD716223A2C9D00D66121 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD715223A2C9D00D66121 /* User.swift */; };
@@ -96,7 +103,14 @@
 		88AE47142199D49800F2EF7B /* My_Salah_RecordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Salah_RecordUITests.swift; sourceTree = "<group>"; };
 		88AE47162199D49800F2EF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88AE47222199D67C00F2EF7B /* dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dp.png; sourceTree = "<group>"; };
+		88DF9F772284B59A00865C71 /* AKPrayerTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPrayerTime.swift; sourceTree = "<group>"; };
 		88E302D92248A91900E739DA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		88E937AD22A49F4E00356C39 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
+		88E937B122A4AA4A00356C39 /* String+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+FormerDemo.swift"; sourceTree = "<group>"; };
+		88E937B222A4AA4B00356C39 /* UIColor+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FormerDemo.swift"; sourceTree = "<group>"; };
+		88E937B522A4AC6200356C39 /* ProfileImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageCell.swift; sourceTree = "<group>"; };
+		88E937B722A4AC6D00356C39 /* ProfileImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileImageCell.xib; sourceTree = "<group>"; };
+		88E937B922A4AC8200356C39 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		88EBD711223A21D600D66121 /* FirebaseFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFetcher.swift; sourceTree = "<group>"; };
 		88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodayVC+extension.swift"; sourceTree = "<group>"; };
 		88EBD715223A2C9D00D66121 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -216,6 +230,8 @@
 				88AE47222199D67C00F2EF7B /* dp.png */,
 				88AE46F12199D49600F2EF7B /* AppDelegate.swift */,
 				88F84F0D219B0A84007280F1 /* GlobalVariables.swift */,
+				88DF9F772284B59A00865C71 /* AKPrayerTime.swift */,
+				88E937B022A4AA3E00356C39 /* Helpers */,
 				88E302D82248A8F800E739DA /* Utilities */,
 				88EBD710223A21B100D66121 /* Fetcher */,
 				88EBD70F223A21A800D66121 /* Models */,
@@ -224,6 +240,10 @@
 				88F84F09219B01CB007280F1 /* TabbarVCs */,
 				88F6CFED22392C1000D1E450 /* LoginVC.swift */,
 				88141459219A2CF70048303B /* TabbarVC.swift */,
+				88E937AD22A49F4E00356C39 /* EditProfileVC.swift */,
+				88E937B522A4AC6200356C39 /* ProfileImageCell.swift */,
+				88E937B722A4AC6D00356C39 /* ProfileImageCell.xib */,
+				88E937B922A4AC8200356C39 /* Profile.swift */,
 				88AE46F52199D49600F2EF7B /* Main.storyboard */,
 				88AE46FB2199D49800F2EF7B /* Assets.xcassets */,
 				88AE46FD2199D49800F2EF7B /* LaunchScreen.storyboard */,
@@ -258,6 +278,15 @@
 				88E302D92248A91900E739DA /* UIViewController+Extension.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		88E937B022A4AA3E00356C39 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				88E937B122A4AA4A00356C39 /* String+FormerDemo.swift */,
+				88E937B222A4AA4B00356C39 /* UIColor+FormerDemo.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		88EBD70F223A21A800D66121 /* Models */ = {
@@ -459,6 +488,7 @@
 				88F3439A219C5CB7004FC1DA /* Poppins-SemiBoldItalic.ttf in Resources */,
 				88F34399219C5CB7004FC1DA /* Poppins-SemiBold.ttf in Resources */,
 				88AE47232199D67C00F2EF7B /* dp.png in Resources */,
+				88E937B822A4AC6D00356C39 /* ProfileImageCell.xib in Resources */,
 				88F34396219C5CB7004FC1DA /* Poppins-Medium.ttf in Resources */,
 				88F3438D219C5CB7004FC1DA /* Poppins-Bold.ttf in Resources */,
 				88F34390219C5CB7004FC1DA /* Poppins-ExtraBoldItalic.ttf in Resources */,
@@ -499,10 +529,12 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-My Salah Record/Pods-My Salah Record-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-My Salah Record/Pods-My Salah Record-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL/openssl.framework",
+				"${BUILT_PRODUCTS_DIR}/Former/Former.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
@@ -516,8 +548,10 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Former.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
@@ -530,7 +564,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-My Salah Record/Pods-My Salah Record-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-My Salah Record/Pods-My Salah Record-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		9061FED53BCBE369A10986A2 /* [CP] Check Pods Manifest.lock */ = {
@@ -598,6 +632,8 @@
 				88F84F08219B01C3007280F1 /* TodayVC.swift in Sources */,
 				88EBD712223A21D600D66121 /* FirebaseFetcher.swift in Sources */,
 				88F84F24219B1B44007280F1 /* SalahTimingCell.swift in Sources */,
+				88E937AE22A49F4E00356C39 /* EditProfileVC.swift in Sources */,
+				88E937B622A4AC6300356C39 /* ProfileImageCell.swift in Sources */,
 				88F84F0E219B0A85007280F1 /* GlobalVariables.swift in Sources */,
 				889722CC219B6D68008588E3 /* TopPerformersCell.swift in Sources */,
 				88F3C12621A00C9D008A46EB /* QazaVC.swift in Sources */,
@@ -605,13 +641,17 @@
 				88F84F0C219B03E2007280F1 /* WeeklyTopPerformers.swift in Sources */,
 				88F84F26219B2759007280F1 /* TopPerformersVC.swift in Sources */,
 				88F3C12421A00C6F008A46EB /* QazaCounterCell.swift in Sources */,
+				88E937B322A4AA4B00356C39 /* String+FormerDemo.swift in Sources */,
+				88DF9F782284B59A00865C71 /* AKPrayerTime.swift in Sources */,
 				88AE46F22199D49600F2EF7B /* AppDelegate.swift in Sources */,
+				88E937BA22A4AC8200356C39 /* Profile.swift in Sources */,
 				88F343A0219C6666004FC1DA /* CalenderCell.swift in Sources */,
 				8814145A219A2CF70048303B /* TabbarVC.swift in Sources */,
 				88F3439E219C64BA004FC1DA /* CalenderVC.swift in Sources */,
 				88EBD716223A2C9D00D66121 /* User.swift in Sources */,
 				88AE46FA2199D49600F2EF7B /* My_Salah_Record.xcdatamodeld in Sources */,
 				88EBD714223A2BBF00D66121 /* TodayVC+extension.swift in Sources */,
+				88E937B422A4AA4B00356C39 /* UIColor+FormerDemo.swift in Sources */,
 				88F6CFEE22392C1000D1E450 /* LoginVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
