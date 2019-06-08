@@ -878,7 +878,7 @@
             </objects>
             <point key="canvasLocation" x="-1574" y="1146"/>
         </scene>
-        <!--Details-->
+        <!--Edit Profile-->
         <scene sceneID="eed-AG-VXD">
             <objects>
                 <viewController id="JLI-ev-RlN" customClass="EditProfileVC" customModule="My_Salah_Record" customModuleProvider="target" sceneMemberID="viewController">
@@ -888,7 +888,17 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="g34-P2-0fT"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Details" id="FXf-1B-O24"/>
+                    <navigationItem key="navigationItem" title="Edit Profile" id="FXf-1B-O24">
+                        <barButtonItem key="rightBarButtonItem" title="Next" id="uUk-o1-Js8">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="btn_next:" destination="JLI-ev-RlN" id="ne7-r0-fee"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <segue destination="vLZ-hC-JsY" kind="show" identifier="Dashboard" id="HPw-SM-vzP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YUN-fr-YNQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1062,4 +1072,7 @@
         <image name="top" width="20" height="23"/>
         <image name="wc1744416" width="1200" height="816"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HPw-SM-vzP"/>
+    </inferredMetricsTieBreakers>
 </document>

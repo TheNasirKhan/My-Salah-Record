@@ -56,11 +56,11 @@ class LoginVC: UIViewController {
                 print(uid)
                 print(isAnonymous)
                 
-//                let firebaseFetcher = FirebaseFetcher()
+                let firebaseFetcher = FirebaseFetcher()
                 
-//                firebaseFetcher.addUser(userID: uid, completionHandler: { (data: DocumentReference?) in
-//                    print(data?.documentID ?? 0)
-//                })
+                firebaseFetcher.addUser(userID: uid, completionHandler: { (data: DocumentReference?) in
+                    print(data?.documentID ?? 0)
+                })
                 
                 DispatchQueue.main.async {
 //                    self.performSegue(withIdentifier: "Dashboard", sender: nil)

@@ -12,9 +12,12 @@ final class Profile {
     
     static let sharedInstance = Profile()
     
+    var id: Int?
     var image: UIImage?
     var name: String?
     var gender: String?
+    var periodcycle: String?
+    var origin: String?
     var birthDay: Date?
     var introduction: String?
     var moreInformation = false

@@ -107,16 +107,30 @@ class FirebaseFetcher {
     
     func addUser(userID:String, completionHandler:  @escaping (DocumentReference?) -> ()) {
         
-        ref = db.collection("users/\(userID)").addDocument(data: [
-            "first": "Ada"
+//        ref = db.collection("users/\(userID)").addDocument(data: [
+//            "first": "Ada"
+//        ]) { err in
+//            if let err = err {
+//                print("Error adding document: \(err)")
+//                completionHandler(nil)
+//            } else {
+//                print("Document added with ID: \(self.ref!.documentID)")
+//                completionHandler(self.ref!)
+//
+//            }
+//        }
+        
+        
+        // Add a new document in collection "cities"
+        db.collection("cities").document("LA").setData([
+            "name": "Los Angeles",
+            "state": "CA",
+            "country": "USA"
         ]) { err in
             if let err = err {
-                print("Error adding document: \(err)")
-                completionHandler(nil)
+                print("Error writing document: \(err)")
             } else {
-                print("Document added with ID: \(self.ref!.documentID)")
-                completionHandler(self.ref!)
-                
+                print("Document successfully written!")
             }
         }
         

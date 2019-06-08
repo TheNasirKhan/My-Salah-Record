@@ -9,6 +9,18 @@
 /* Begin PBXBuildFile section */
 		40C636714FA959B7229CAFA2 /* Pods_My_Salah_RecordUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0130D5214EEFBF129EECE0 /* Pods_My_Salah_RecordUITests.framework */; };
 		8814145A219A2CF70048303B /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88141459219A2CF70048303B /* TabbarVC.swift */; };
+		888660B922A695B2002FA03B /* DynamicHeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888660B322A695B1002FA03B /* DynamicHeightCell.swift */; };
+		888660BA22A695B2002FA03B /* ProfileFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888660B422A695B2002FA03B /* ProfileFieldCell.swift */; };
+		888660BB22A695B2002FA03B /* ProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888660B522A695B2002FA03B /* ProfileImageCell.swift */; };
+		888660BC22A695B2002FA03B /* ProfileLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888660B622A695B2002FA03B /* ProfileLabelCell.swift */; };
+		888660BD22A695B2002FA03B /* CenterLabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888660B722A695B2002FA03B /* CenterLabelCell.swift */; };
+		888660BE22A695B2002FA03B /* ColorListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888660B822A695B2002FA03B /* ColorListCell.swift */; };
+		888660C422A695D1002FA03B /* ColorListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888660BF22A695D1002FA03B /* ColorListCell.xib */; };
+		888660C522A695D1002FA03B /* ProfileFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888660C022A695D1002FA03B /* ProfileFieldCell.xib */; };
+		888660C622A695D1002FA03B /* ProfileImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888660C122A695D1002FA03B /* ProfileImageCell.xib */; };
+		888660C722A695D1002FA03B /* ProfileLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888660C222A695D1002FA03B /* ProfileLabelCell.xib */; };
+		888660C822A695D1002FA03B /* DynamicHeightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888660C322A695D1002FA03B /* DynamicHeightCell.xib */; };
+		888660CC22A69686002FA03B /* FormerInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888660CB22A69686002FA03B /* FormerInputAccessoryView.swift */; };
 		889722CC219B6D68008588E3 /* TopPerformersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889722CB219B6D68008588E3 /* TopPerformersCell.swift */; };
 		88AE46F22199D49600F2EF7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE46F12199D49600F2EF7B /* AppDelegate.swift */; };
 		88AE46F72199D49600F2EF7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AE46F52199D49600F2EF7B /* Main.storyboard */; };
@@ -23,8 +35,6 @@
 		88E937AE22A49F4E00356C39 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937AD22A49F4E00356C39 /* EditProfileVC.swift */; };
 		88E937B322A4AA4B00356C39 /* String+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937B122A4AA4A00356C39 /* String+FormerDemo.swift */; };
 		88E937B422A4AA4B00356C39 /* UIColor+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937B222A4AA4B00356C39 /* UIColor+FormerDemo.swift */; };
-		88E937B622A4AC6300356C39 /* ProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937B522A4AC6200356C39 /* ProfileImageCell.swift */; };
-		88E937B822A4AC6D00356C39 /* ProfileImageCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 88E937B722A4AC6D00356C39 /* ProfileImageCell.xib */; };
 		88E937BA22A4AC8200356C39 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937B922A4AC8200356C39 /* Profile.swift */; };
 		88EBD712223A21D600D66121 /* FirebaseFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD711223A21D600D66121 /* FirebaseFetcher.swift */; };
 		88EBD714223A2BBF00D66121 /* TodayVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */; };
@@ -88,6 +98,18 @@
 		4478F1F56D9B18D4FB886BEA /* Pods_My_Salah_RecordTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Salah_RecordTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		489F9C86B9550E455A112D8A /* Pods-My Salah RecordTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah RecordTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah RecordTests/Pods-My Salah RecordTests.debug.xcconfig"; sourceTree = "<group>"; };
 		88141459219A2CF70048303B /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		888660B322A695B1002FA03B /* DynamicHeightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHeightCell.swift; sourceTree = "<group>"; };
+		888660B422A695B2002FA03B /* ProfileFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileFieldCell.swift; sourceTree = "<group>"; };
+		888660B522A695B2002FA03B /* ProfileImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageCell.swift; sourceTree = "<group>"; };
+		888660B622A695B2002FA03B /* ProfileLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileLabelCell.swift; sourceTree = "<group>"; };
+		888660B722A695B2002FA03B /* CenterLabelCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CenterLabelCell.swift; sourceTree = "<group>"; };
+		888660B822A695B2002FA03B /* ColorListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorListCell.swift; sourceTree = "<group>"; };
+		888660BF22A695D1002FA03B /* ColorListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ColorListCell.xib; sourceTree = "<group>"; };
+		888660C022A695D1002FA03B /* ProfileFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileFieldCell.xib; sourceTree = "<group>"; };
+		888660C122A695D1002FA03B /* ProfileImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileImageCell.xib; sourceTree = "<group>"; };
+		888660C222A695D1002FA03B /* ProfileLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileLabelCell.xib; sourceTree = "<group>"; };
+		888660C322A695D1002FA03B /* DynamicHeightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicHeightCell.xib; sourceTree = "<group>"; };
+		888660CB22A69686002FA03B /* FormerInputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormerInputAccessoryView.swift; sourceTree = "<group>"; };
 		889722CB219B6D68008588E3 /* TopPerformersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPerformersCell.swift; sourceTree = "<group>"; };
 		88AE46EE2199D49600F2EF7B /* My Salah Record.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Salah Record.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AE46F12199D49600F2EF7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -108,8 +130,6 @@
 		88E937AD22A49F4E00356C39 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		88E937B122A4AA4A00356C39 /* String+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+FormerDemo.swift"; sourceTree = "<group>"; };
 		88E937B222A4AA4B00356C39 /* UIColor+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FormerDemo.swift"; sourceTree = "<group>"; };
-		88E937B522A4AC6200356C39 /* ProfileImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageCell.swift; sourceTree = "<group>"; };
-		88E937B722A4AC6D00356C39 /* ProfileImageCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileImageCell.xib; sourceTree = "<group>"; };
 		88E937B922A4AC8200356C39 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		88EBD711223A21D600D66121 /* FirebaseFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFetcher.swift; sourceTree = "<group>"; };
 		88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodayVC+extension.swift"; sourceTree = "<group>"; };
@@ -201,6 +221,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		888660B222A59FC7002FA03B /* Edit Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Edit Profile";
+			sourceTree = "<group>";
+		};
+		888660C922A695E5002FA03B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				888660BF22A695D1002FA03B /* ColorListCell.xib */,
+				888660C322A695D1002FA03B /* DynamicHeightCell.xib */,
+				888660C022A695D1002FA03B /* ProfileFieldCell.xib */,
+				888660C122A695D1002FA03B /* ProfileImageCell.xib */,
+				888660C222A695D1002FA03B /* ProfileLabelCell.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		888660CA22A6960F002FA03B /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				888660B722A695B2002FA03B /* CenterLabelCell.swift */,
+				888660B822A695B2002FA03B /* ColorListCell.swift */,
+				888660B322A695B1002FA03B /* DynamicHeightCell.swift */,
+				888660B422A695B2002FA03B /* ProfileFieldCell.swift */,
+				888660B522A695B2002FA03B /* ProfileImageCell.swift */,
+				888660B622A695B2002FA03B /* ProfileLabelCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		88AE46E52199D49600F2EF7B = {
 			isa = PBXGroup;
 			children = (
@@ -241,8 +293,10 @@
 				88F6CFED22392C1000D1E450 /* LoginVC.swift */,
 				88141459219A2CF70048303B /* TabbarVC.swift */,
 				88E937AD22A49F4E00356C39 /* EditProfileVC.swift */,
-				88E937B522A4AC6200356C39 /* ProfileImageCell.swift */,
-				88E937B722A4AC6D00356C39 /* ProfileImageCell.xib */,
+				888660CB22A69686002FA03B /* FormerInputAccessoryView.swift */,
+				888660CA22A6960F002FA03B /* Cells */,
+				888660C922A695E5002FA03B /* Resources */,
+				888660B222A59FC7002FA03B /* Edit Profile */,
 				88E937B922A4AC8200356C39 /* Profile.swift */,
 				88AE46F52199D49600F2EF7B /* Main.storyboard */,
 				88AE46FB2199D49800F2EF7B /* Assets.xcassets */,
@@ -487,17 +541,21 @@
 				88F3438F219C5CB7004FC1DA /* Poppins-ExtraBold.ttf in Resources */,
 				88F3439A219C5CB7004FC1DA /* Poppins-SemiBoldItalic.ttf in Resources */,
 				88F34399219C5CB7004FC1DA /* Poppins-SemiBold.ttf in Resources */,
+				888660C522A695D1002FA03B /* ProfileFieldCell.xib in Resources */,
 				88AE47232199D67C00F2EF7B /* dp.png in Resources */,
-				88E937B822A4AC6D00356C39 /* ProfileImageCell.xib in Resources */,
+				888660C422A695D1002FA03B /* ColorListCell.xib in Resources */,
+				888660C822A695D1002FA03B /* DynamicHeightCell.xib in Resources */,
 				88F34396219C5CB7004FC1DA /* Poppins-Medium.ttf in Resources */,
 				88F3438D219C5CB7004FC1DA /* Poppins-Bold.ttf in Resources */,
 				88F34390219C5CB7004FC1DA /* Poppins-ExtraBoldItalic.ttf in Resources */,
 				88AE46FC2199D49800F2EF7B /* Assets.xcassets in Resources */,
 				88F34394219C5CB7004FC1DA /* Poppins-Light.ttf in Resources */,
 				88F34393219C5CB7004FC1DA /* Poppins-Italic.ttf in Resources */,
+				888660C622A695D1002FA03B /* ProfileImageCell.xib in Resources */,
 				88F34397219C5CB7004FC1DA /* Poppins-MediumItalic.ttf in Resources */,
 				88F3439B219C5CB7004FC1DA /* Poppins-Thin.ttf in Resources */,
 				88AE46F72199D49600F2EF7B /* Main.storyboard in Resources */,
+				888660C722A695D1002FA03B /* ProfileLabelCell.xib in Resources */,
 				88F34391219C5CB7004FC1DA /* Poppins-ExtraLight.ttf in Resources */,
 				88F220FB2238EF1E00309F72 /* GoogleService-Info.plist in Resources */,
 				88F3438C219C5CB7004FC1DA /* Poppins-BlackItalic.ttf in Resources */,
@@ -629,19 +687,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				88F3C12221A0043D008A46EB /* DatePickerTextFieldView.swift in Sources */,
+				888660CC22A69686002FA03B /* FormerInputAccessoryView.swift in Sources */,
 				88F84F08219B01C3007280F1 /* TodayVC.swift in Sources */,
 				88EBD712223A21D600D66121 /* FirebaseFetcher.swift in Sources */,
 				88F84F24219B1B44007280F1 /* SalahTimingCell.swift in Sources */,
 				88E937AE22A49F4E00356C39 /* EditProfileVC.swift in Sources */,
-				88E937B622A4AC6300356C39 /* ProfileImageCell.swift in Sources */,
+				888660BB22A695B2002FA03B /* ProfileImageCell.swift in Sources */,
 				88F84F0E219B0A85007280F1 /* GlobalVariables.swift in Sources */,
 				889722CC219B6D68008588E3 /* TopPerformersCell.swift in Sources */,
 				88F3C12621A00C9D008A46EB /* QazaVC.swift in Sources */,
+				888660BA22A695B2002FA03B /* ProfileFieldCell.swift in Sources */,
 				88E302DA2248A91900E739DA /* UIViewController+Extension.swift in Sources */,
 				88F84F0C219B03E2007280F1 /* WeeklyTopPerformers.swift in Sources */,
 				88F84F26219B2759007280F1 /* TopPerformersVC.swift in Sources */,
+				888660B922A695B2002FA03B /* DynamicHeightCell.swift in Sources */,
 				88F3C12421A00C6F008A46EB /* QazaCounterCell.swift in Sources */,
 				88E937B322A4AA4B00356C39 /* String+FormerDemo.swift in Sources */,
+				888660BC22A695B2002FA03B /* ProfileLabelCell.swift in Sources */,
 				88DF9F782284B59A00865C71 /* AKPrayerTime.swift in Sources */,
 				88AE46F22199D49600F2EF7B /* AppDelegate.swift in Sources */,
 				88E937BA22A4AC8200356C39 /* Profile.swift in Sources */,
@@ -651,8 +713,10 @@
 				88EBD716223A2C9D00D66121 /* User.swift in Sources */,
 				88AE46FA2199D49600F2EF7B /* My_Salah_Record.xcdatamodeld in Sources */,
 				88EBD714223A2BBF00D66121 /* TodayVC+extension.swift in Sources */,
+				888660BD22A695B2002FA03B /* CenterLabelCell.swift in Sources */,
 				88E937B422A4AA4B00356C39 /* UIColor+FormerDemo.swift in Sources */,
 				88F6CFEE22392C1000D1E450 /* LoginVC.swift in Sources */,
+				888660BE22A695B2002FA03B /* ColorListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
