@@ -67,9 +67,12 @@ class FirebaseFetcher {
                 let user = authResult?.user
                 let isAnonymous = user?.isAnonymous  // true
                 let uid = user?.uid
+//                user?.phoneNumber
+                Profile.sharedInstance.id = uid
+                Profile.sharedInstance.isAnonymous = isAnonymous
                 
-                print(uid)
-                print(isAnonymous)
+//                print(uid)
+//                print(isAnonymous)
                 
                 
             } else {

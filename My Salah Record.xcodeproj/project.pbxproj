@@ -291,13 +291,12 @@
 				88F84F0A219B03A6007280F1 /* Custom Cells */,
 				88F84F09219B01CB007280F1 /* TabbarVCs */,
 				88F6CFED22392C1000D1E450 /* LoginVC.swift */,
-				88141459219A2CF70048303B /* TabbarVC.swift */,
 				88E937AD22A49F4E00356C39 /* EditProfileVC.swift */,
+				88141459219A2CF70048303B /* TabbarVC.swift */,
 				888660CB22A69686002FA03B /* FormerInputAccessoryView.swift */,
 				888660CA22A6960F002FA03B /* Cells */,
 				888660C922A695E5002FA03B /* Resources */,
 				888660B222A59FC7002FA03B /* Edit Profile */,
-				88E937B922A4AC8200356C39 /* Profile.swift */,
 				88AE46F52199D49600F2EF7B /* Main.storyboard */,
 				88AE46FB2199D49800F2EF7B /* Assets.xcassets */,
 				88AE46FD2199D49800F2EF7B /* LaunchScreen.storyboard */,
@@ -347,6 +346,7 @@
 			isa = PBXGroup;
 			children = (
 				88EBD715223A2C9D00D66121 /* User.swift */,
+				88E937B922A4AC8200356C39 /* Profile.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";

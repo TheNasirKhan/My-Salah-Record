@@ -12,7 +12,7 @@ final class Profile {
     
     static let sharedInstance = Profile()
     
-    var id: Int?
+    var id: String?
     var image: UIImage?
     var name: String?
     var gender: String?
@@ -25,4 +25,6 @@ final class Profile {
     var location: String?
     var phoneNumber: String?
     var job: String?
+    var isAnonymous: Bool?
+    
 }

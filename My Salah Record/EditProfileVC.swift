@@ -13,7 +13,7 @@
 //  EditProfileViewController.swift
 //  Former-Demo
 //
-//  Created by Ryo Aoyama on 10/31/15.
+//  Created by Nasir Khan on 10/31/18.
 //  Copyright © 2015 Ryo Aoyama. All rights reserved.
 //
 
@@ -30,10 +30,9 @@ final class EditProfileVC: FormViewController {
     }
     
     @IBAction func btn_next(_ sender: Any) {
+//        Profile.sharedInstance.image
         self.performSegue(withIdentifier: "Dashboard", sender: nil)
     }
-    // MARK: Private
-    
     private lazy var formerInputAccessoryView: FormerInputAccessoryView = FormerInputAccessoryView(former: self.former)
     
     fileprivate lazy var imageRow: LabelRowFormer<ProfileImageCell> = {
