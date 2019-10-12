@@ -20,22 +20,36 @@ class LoginVC: UIViewController {
         super.viewDidLoad()
         
         btn_login.layer.cornerRadius = btn_login.bounds.height / 2
-        
         txt_phone.attributedPlaceholder = NSAttributedString(string: "Phone Number",
                                                                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.3)])
-        
-       
         
         let dismissKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         dismissKeyboardGesture.cancelsTouchesInView = false
         self.view.addGestureRecognizer(dismissKeyboardGesture)
         
-        let code = UserDefaults.standard.string(forKey: "authVerificationID")
-        print(code)
+//        let code = UserDefaults.standard.string(forKey: "authVerificationID")
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    func toDoWithData(authResult:AuthDataResult)  {
+        
+        let user = authResult.user
+        let isAnonymous = user.isAnonymous  // true
+        let uid = user.uid
+        
+        Profile.sharedInstance.id = uid
+        
+        FirebaseFetcher.sharedInstance.addUser(userProfile: Profile.sharedInstance) {
+            DispatchQueue.main.async {
+                //                    self.performSegue(withIdentifier: "Dashboard", sender: nil)
+                self.performSegue(withIdentifier: "EditProfileVC", sender: nil)
+            }
+        }
+        
+        
         
     }
     
@@ -44,37 +58,14 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func btn_skip(_ sender: UIButton) {
-        
         Auth.auth().signInAnonymously() { (authResult, error) in
-            
             if (error == nil) {
-                
-                let user = authResult!.user
-                let isAnonymous = user.isAnonymous  // true
-                let uid = user.uid
-                
-                print(uid)
-                print(isAnonymous)
-                
-                let firebaseFetcher = FirebaseFetcher()
-                
-                firebaseFetcher.addUser(userID: uid, completionHandler: { (data: DocumentReference?) in
-                    print(data?.documentID ?? 0)
-                })
-                
-                DispatchQueue.main.async {
-//                    self.performSegue(withIdentifier: "Dashboard", sender: nil)
-                    self.performSegue(withIdentifier: "EditProfileVC", sender: nil)
-                }
-                
+                self.toDoWithData(authResult: authResult!)
             } else {
                 print(error!.localizedDescription)
+                self.popUp(message: error!.localizedDescription)
             }
-            
-            
-            
         }
-        
     }
     
     @IBAction func btn_enter(_ sender: Any) {
@@ -83,11 +74,9 @@ class LoginVC: UIViewController {
             if let error = error {
                 self.popUp(message: error.localizedDescription)
                 return
-            } else {
             }
             
             // Sign in using the verificationID and the code sent to the user
-            
             UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
             
             let alertController = UIAlertController(title: "Verification", message: "Enter Verification code send on your mobile", preferredStyle: .alert)
@@ -104,15 +93,10 @@ class LoginVC: UIViewController {
                 Auth.auth().signInAndRetrieveData(with: credential) { (authResult, error) in
                     if let error = error {
                         self.popUp(message: error.localizedDescription)
-                        return
-                    }
-                    print(authResult?.user.phoneNumber)
-                    // User is signed in
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "Dashboard", sender: nil)
+                    } else {
+                        self.toDoWithData(authResult: authResult!)
                     }
                 }
-                
                 
             }))
             alertController.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -120,15 +104,11 @@ class LoginVC: UIViewController {
                 textField.placeholder = "Verification code"
             })
             self.present(alertController, animated: true, completion: nil)
-            
-            
         }
-        
-        
-
-        
     }
     
-    
+    func enterVerificationCode() {
+        
+    }
 }
 

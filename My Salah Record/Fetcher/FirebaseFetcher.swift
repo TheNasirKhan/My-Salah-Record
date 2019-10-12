@@ -12,12 +12,13 @@ import FirebaseFirestore
 
 class FirebaseFetcher {
     
+    static let sharedInstance = FirebaseFetcher()
+    
     let db = Firestore.firestore()
-
     var ref: DocumentReference? = nil
     
     func addDoc(completionHandler:  @escaping (DocumentReference?) -> ()) {
-    
+        
         ref = db.collection("users").addDocument(data: [
             "first": "Ada",
             "last": "Lovelace",
@@ -29,7 +30,7 @@ class FirebaseFetcher {
             } else {
                 print("Document added with ID: \(self.ref!.documentID)")
                 completionHandler(self.ref!)
-                
+
             }
         }
         
@@ -67,7 +68,7 @@ class FirebaseFetcher {
                 let user = authResult?.user
                 let isAnonymous = user?.isAnonymous  // true
                 let uid = user?.uid
-//                user?.phoneNumber
+//                user?.phoneNumbers
                 Profile.sharedInstance.id = uid
                 Profile.sharedInstance.isAnonymous = isAnonymous
                 
@@ -108,7 +109,7 @@ class FirebaseFetcher {
         
     }
     
-    func addUser(userID:String, completionHandler:  @escaping (DocumentReference?) -> ()) {
+    func addUser(userProfile:Profile, completionHandler:  @escaping () -> ()) {
         
 //        ref = db.collection("users/\(userID)").addDocument(data: [
 //            "first": "Ada"
@@ -125,15 +126,14 @@ class FirebaseFetcher {
         
         
         // Add a new document in collection "cities"
-        db.collection("cities").document("LA").setData([
-            "name": "Los Angeles",
-            "state": "CA",
-            "country": "USA"
+        db.collection("users").document(userProfile.id!).setData([
+            "name": "Los Angeles"
         ]) { err in
             if let err = err {
                 print("Error writing document: \(err)")
             } else {
                 print("Document successfully written!")
+                completionHandler()
             }
         }
         

@@ -31,7 +31,12 @@ final class EditProfileVC: FormViewController {
     
     @IBAction func btn_next(_ sender: Any) {
 //        Profile.sharedInstance.image
-        self.performSegue(withIdentifier: "Dashboard", sender: nil)
+        
+        FirebaseFetcher.sharedInstance.addUser(userProfile: Profile.sharedInstance) {
+            self.performSegue(withIdentifier: "Dashboard", sender: nil)
+        }
+        
+        
     }
     private lazy var formerInputAccessoryView: FormerInputAccessoryView = FormerInputAccessoryView(former: self.former)
     
