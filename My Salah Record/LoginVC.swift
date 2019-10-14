@@ -28,6 +28,13 @@ class LoginVC: UIViewController {
         self.view.addGestureRecognizer(dismissKeyboardGesture)
         
 //        let code = UserDefaults.standard.string(forKey: "authVerificationID")
+        
+        if !(Auth.auth().currentUser?.uid ?? "").isEmpty {
+            FirebaseFetcher.sharedInstance.getDoc(userID: Auth.auth().currentUser!.uid) { (data) in
+                Profile.sharedInstance = Profile(userData: data!)
+                self.performSegue(withIdentifier: "Dashboard", sender: nil)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -44,13 +51,9 @@ class LoginVC: UIViewController {
         
         FirebaseFetcher.sharedInstance.addUser(userProfile: Profile.sharedInstance) {
             DispatchQueue.main.async {
-                //                    self.performSegue(withIdentifier: "Dashboard", sender: nil)
                 self.performSegue(withIdentifier: "EditProfileVC", sender: nil)
             }
         }
-        
-        
-        
     }
     
     @objc func hideKeyboard() {

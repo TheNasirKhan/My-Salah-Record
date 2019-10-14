@@ -184,7 +184,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZjE-Vu-k1d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="2191.7541229385311"/>
+            <point key="canvasLocation" x="2850" y="2239"/>
         </scene>
         <!--Qaza Record-->
         <scene sceneID="jPw-Dd-hqn">
@@ -497,23 +497,23 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jeq-rh-9T5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="2931.1844077961023"/>
+            <point key="canvasLocation" x="2850" y="2978"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings-->
         <scene sceneID="Ybb-X1-9xm">
             <objects>
-                <viewController id="qWo-rS-S0q" sceneMemberID="viewController">
+                <viewController id="qWo-rS-S0q" customClass="SettingsVC" customModule="My_Salah_Record" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MYX-gk-kWR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="qdv-mc-DMX"/>
                     </view>
-                    <navigationItem key="navigationItem" id="od0-YX-smV"/>
+                    <navigationItem key="navigationItem" title="Settings" id="od0-YX-smV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b39-Q8-Du1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="972" y="3652.6236881559225"/>
+            <point key="canvasLocation" x="2850" y="3699"/>
         </scene>
         <!--Today's Salah-->
         <scene sceneID="1fZ-bH-q6z">
@@ -604,7 +604,7 @@
                                 </connections>
                             </collectionView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="38K-Gl-IRR">
-                                <rect key="frame" x="16" y="189" width="343" height="437"/>
+                                <rect key="frame" x="16" y="189" width="343" height="361"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="89" id="4fm-Cy-Paw" customClass="SalahTimingCell" customModule="My_Salah_Record" customModuleProvider="target">
@@ -733,22 +733,73 @@
                                     <outlet property="delegate" destination="cOe-w1-sFq" id="LuK-w8-ozo"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XX7-7Z-KX8">
+                                <rect key="frame" x="0.0" y="558" width="375" height="60"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IYS-Wf-TGD">
+                                        <rect key="frame" x="20" y="0.0" width="210.5" height="60"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="XA8-6i-Xs1"/>
+                                        </constraints>
+                                        <string key="text">Add your Phone Number
+To connect with your contacts &amp;
+To access your data on any device</string>
+                                        <fontDescription key="fontDescription" name="Poppins-SemiBold" family="Poppins" pointSize="12"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Flb-xG-wUW">
+                                        <rect key="frame" x="267" y="9.5" width="100" height="41"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="41" id="Med-Cl-cTB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
+                                        <state key="normal" title="   Add Number   ">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eT0-wv-v2k">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
+                                        <color key="backgroundColor" white="0.66666666669999997" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="0.5" id="ftM-jy-VPS"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="0.051138864436619719" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="eT0-wv-v2k" firstAttribute="top" secondItem="XX7-7Z-KX8" secondAttribute="top" id="Amo-jc-di0"/>
+                                    <constraint firstAttribute="height" constant="60" id="I4t-za-rcf"/>
+                                    <constraint firstItem="Flb-xG-wUW" firstAttribute="centerY" secondItem="XX7-7Z-KX8" secondAttribute="centerY" id="PRa-f1-icy"/>
+                                    <constraint firstItem="IYS-Wf-TGD" firstAttribute="leading" secondItem="XX7-7Z-KX8" secondAttribute="leading" constant="20" id="eBB-mh-1Yb"/>
+                                    <constraint firstAttribute="trailing" secondItem="eT0-wv-v2k" secondAttribute="trailing" id="gJA-Bg-WX4"/>
+                                    <constraint firstAttribute="trailing" secondItem="Flb-xG-wUW" secondAttribute="trailing" constant="8" id="kKY-Za-CsT"/>
+                                    <constraint firstItem="IYS-Wf-TGD" firstAttribute="centerY" secondItem="XX7-7Z-KX8" secondAttribute="centerY" id="vwq-iv-zFr"/>
+                                    <constraint firstItem="eT0-wv-v2k" firstAttribute="leading" secondItem="XX7-7Z-KX8" secondAttribute="leading" id="xOf-Qh-obG"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="U7M-u9-ATt" firstAttribute="bottom" secondItem="XX7-7Z-KX8" secondAttribute="bottom" id="CZ4-ME-3Ee"/>
+                            <constraint firstItem="XX7-7Z-KX8" firstAttribute="leading" secondItem="U7M-u9-ATt" secondAttribute="leading" id="Jpk-sZ-ns9"/>
                             <constraint firstItem="38K-Gl-IRR" firstAttribute="leading" secondItem="U7M-u9-ATt" secondAttribute="leading" constant="16" id="Nox-1q-UY3"/>
                             <constraint firstItem="Yr4-zh-RwX" firstAttribute="leading" secondItem="U7M-u9-ATt" secondAttribute="leading" id="PSc-HM-LMl"/>
-                            <constraint firstItem="38K-Gl-IRR" firstAttribute="bottom" secondItem="U7M-u9-ATt" secondAttribute="bottom" constant="8" id="XzS-Ge-fFJ"/>
+                            <constraint firstItem="XX7-7Z-KX8" firstAttribute="top" secondItem="38K-Gl-IRR" secondAttribute="bottom" constant="8" id="Vd2-ub-xkg"/>
                             <constraint firstItem="U7M-u9-ATt" firstAttribute="trailing" secondItem="38K-Gl-IRR" secondAttribute="trailing" constant="16" id="f1b-0h-P2V"/>
                             <constraint firstItem="38K-Gl-IRR" firstAttribute="top" secondItem="Yr4-zh-RwX" secondAttribute="bottom" constant="12" id="nlf-aT-DZ3"/>
                             <constraint firstItem="Yr4-zh-RwX" firstAttribute="trailing" secondItem="U7M-u9-ATt" secondAttribute="trailing" id="tdh-cx-Fz8"/>
                             <constraint firstItem="Yr4-zh-RwX" firstAttribute="top" secondItem="U7M-u9-ATt" secondAttribute="top" constant="8" id="uv1-By-vOE"/>
+                            <constraint firstItem="U7M-u9-ATt" firstAttribute="trailing" secondItem="XX7-7Z-KX8" secondAttribute="trailing" id="zCx-J6-IAS"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="U7M-u9-ATt"/>
                     </view>
                     <navigationItem key="navigationItem" title="Today's Salah" id="eHt-2e-cRX"/>
                     <connections>
+                        <outlet property="btnoAddNumber" destination="Flb-xG-wUW" id="xcs-X5-2Yq"/>
+                        <outlet property="constFooterHeight" destination="I4t-za-rcf" id="rca-48-6oE"/>
+                        <outlet property="lblAddNumber" destination="IYS-Wf-TGD" id="Wkj-TA-38z"/>
                         <outlet property="table" destination="38K-Gl-IRR" id="V7S-h0-EDu"/>
+                        <outlet property="vuAddNumber" destination="XX7-7Z-KX8" id="bZK-pS-rOG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aud-3P-xCr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -982,7 +1033,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MOR-lX-HR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="2191.7541229385311"/>
+            <point key="canvasLocation" x="1911" y="2239"/>
         </scene>
         <!--Qaza-->
         <scene sceneID="G2n-dB-ovA">
@@ -1001,7 +1052,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ldQ-TY-YgT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="2931.1844077961023"/>
+            <point key="canvasLocation" x="1911" y="2978"/>
         </scene>
         <!--Settings-->
         <scene sceneID="hbB-7s-xD9">
@@ -1020,7 +1071,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="40v-9z-kfP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="32.799999999999997" y="3652.6236881559225"/>
+            <point key="canvasLocation" x="1911" y="3699"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="BMS-QC-fvd">

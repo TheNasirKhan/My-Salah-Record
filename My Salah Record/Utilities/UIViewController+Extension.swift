@@ -18,4 +18,13 @@ extension UIViewController {
         
     }
     
+    func alert(title: String, message: String, actionTitle: String, comletion: @escaping () -> ()) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: actionTitle, style: .default, handler: { (action) in
+            comletion()
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
 }

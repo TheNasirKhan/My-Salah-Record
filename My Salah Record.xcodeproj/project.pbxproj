@@ -21,6 +21,7 @@
 		888660C722A695D1002FA03B /* ProfileLabelCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888660C222A695D1002FA03B /* ProfileLabelCell.xib */; };
 		888660C822A695D1002FA03B /* DynamicHeightCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 888660C322A695D1002FA03B /* DynamicHeightCell.xib */; };
 		888660CC22A69686002FA03B /* FormerInputAccessoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888660CB22A69686002FA03B /* FormerInputAccessoryView.swift */; };
+		8894DA4F23531B6D00977016 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8894DA4E23531B6D00977016 /* SettingsVC.swift */; };
 		889722CC219B6D68008588E3 /* TopPerformersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889722CB219B6D68008588E3 /* TopPerformersCell.swift */; };
 		88AE46F22199D49600F2EF7B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE46F12199D49600F2EF7B /* AppDelegate.swift */; };
 		88AE46F72199D49600F2EF7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88AE46F52199D49600F2EF7B /* Main.storyboard */; };
@@ -64,6 +65,8 @@
 		88F3C12421A00C6F008A46EB /* QazaCounterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3C12321A00C6F008A46EB /* QazaCounterCell.swift */; };
 		88F3C12621A00C9D008A46EB /* QazaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3C12521A00C9D008A46EB /* QazaVC.swift */; };
 		88F6CFEE22392C1000D1E450 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6CFED22392C1000D1E450 /* LoginVC.swift */; };
+		88F73AB82352EB3C00340458 /* Ex+AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F73AB72352EB3C00340458 /* Ex+AppDelegate.swift */; };
+		88F73ABA2352F47E00340458 /* Ex+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F73AB92352F47E00340458 /* Ex+UIView.swift */; };
 		88F84F08219B01C3007280F1 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F07219B01C3007280F1 /* TodayVC.swift */; };
 		88F84F0C219B03E2007280F1 /* WeeklyTopPerformers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F0B219B03E2007280F1 /* WeeklyTopPerformers.swift */; };
 		88F84F0E219B0A85007280F1 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F0D219B0A84007280F1 /* GlobalVariables.swift */; };
@@ -110,6 +113,7 @@
 		888660C222A695D1002FA03B /* ProfileLabelCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileLabelCell.xib; sourceTree = "<group>"; };
 		888660C322A695D1002FA03B /* DynamicHeightCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DynamicHeightCell.xib; sourceTree = "<group>"; };
 		888660CB22A69686002FA03B /* FormerInputAccessoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormerInputAccessoryView.swift; sourceTree = "<group>"; };
+		8894DA4E23531B6D00977016 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		889722CB219B6D68008588E3 /* TopPerformersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPerformersCell.swift; sourceTree = "<group>"; };
 		88AE46EE2199D49600F2EF7B /* My Salah Record.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "My Salah Record.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		88AE46F12199D49600F2EF7B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -142,6 +146,8 @@
 		88F3C12321A00C6F008A46EB /* QazaCounterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaCounterCell.swift; sourceTree = "<group>"; };
 		88F3C12521A00C9D008A46EB /* QazaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaVC.swift; sourceTree = "<group>"; };
 		88F6CFED22392C1000D1E450 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		88F73AB72352EB3C00340458 /* Ex+AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+AppDelegate.swift"; sourceTree = "<group>"; };
+		88F73AB92352F47E00340458 /* Ex+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIView.swift"; sourceTree = "<group>"; };
 		88F84F07219B01C3007280F1 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
 		88F84F0B219B03E2007280F1 /* WeeklyTopPerformers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyTopPerformers.swift; sourceTree = "<group>"; };
 		88F84F0D219B0A84007280F1 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
@@ -281,6 +287,7 @@
 				88F220FC2238F0F900309F72 /* My Salah Record.entitlements */,
 				88AE47222199D67C00F2EF7B /* dp.png */,
 				88AE46F12199D49600F2EF7B /* AppDelegate.swift */,
+				88F73AB72352EB3C00340458 /* Ex+AppDelegate.swift */,
 				88F84F0D219B0A84007280F1 /* GlobalVariables.swift */,
 				88DF9F772284B59A00865C71 /* AKPrayerTime.swift */,
 				88E937B022A4AA3E00356C39 /* Helpers */,
@@ -329,6 +336,7 @@
 			isa = PBXGroup;
 			children = (
 				88E302D92248A91900E739DA /* UIViewController+Extension.swift */,
+				88F73AB92352F47E00340458 /* Ex+UIView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -367,6 +375,7 @@
 				88F84F25219B2759007280F1 /* TopPerformersVC.swift */,
 				88F3439D219C64BA004FC1DA /* CalenderVC.swift */,
 				88F3C12521A00C9D008A46EB /* QazaVC.swift */,
+				8894DA4E23531B6D00977016 /* SettingsVC.swift */,
 			);
 			path = TabbarVCs;
 			sourceTree = "<group>";
@@ -594,6 +603,7 @@
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/KeychainSwift/KeychainSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC/GRPCClient.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -611,6 +621,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/KeychainSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GRPCClient.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -703,10 +714,13 @@
 				888660B922A695B2002FA03B /* DynamicHeightCell.swift in Sources */,
 				88F3C12421A00C6F008A46EB /* QazaCounterCell.swift in Sources */,
 				88E937B322A4AA4B00356C39 /* String+FormerDemo.swift in Sources */,
+				8894DA4F23531B6D00977016 /* SettingsVC.swift in Sources */,
 				888660BC22A695B2002FA03B /* ProfileLabelCell.swift in Sources */,
 				88DF9F782284B59A00865C71 /* AKPrayerTime.swift in Sources */,
+				88F73AB82352EB3C00340458 /* Ex+AppDelegate.swift in Sources */,
 				88AE46F22199D49600F2EF7B /* AppDelegate.swift in Sources */,
 				88E937BA22A4AC8200356C39 /* Profile.swift in Sources */,
+				88F73ABA2352F47E00340458 /* Ex+UIView.swift in Sources */,
 				88F343A0219C6666004FC1DA /* CalenderCell.swift in Sources */,
 				8814145A219A2CF70048303B /* TabbarVC.swift in Sources */,
 				88F3439E219C64BA004FC1DA /* CalenderVC.swift in Sources */,

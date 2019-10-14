@@ -12,7 +12,7 @@ import FirebaseFirestore
 
 class FirebaseFetcher {
     
-    static let sharedInstance = FirebaseFetcher()
+    static var sharedInstance = FirebaseFetcher()
     
     let db = Firestore.firestore()
     var ref: DocumentReference? = nil
@@ -36,26 +36,38 @@ class FirebaseFetcher {
         
     }
     
-    
-    func getDoc(completion: @escaping ([QueryDocumentSnapshot]?) -> ()) {
+    func getDoc(userID: String, completion: @escaping (DocumentSnapshot?) -> ()) {
         
-        db.collection("users").getDocuments() { (querySnapshot, err) in
+        db.collection("users").document(userID).getDocument { (querySnapshot, err) in
             if let err = err {
                 print("Error getting documents: \(err)")
             } else {
-                var newData = [QueryDocumentSnapshot]()
-                
-                for document in querySnapshot!.documents {
-                    print("\(document.documentID) => \(document.data())")
-                    newData.append(document)
-                    
-                }
-                
-                completion(newData)
+                completion(querySnapshot)
             }
         }
         
     }
+    
+    
+//    func getDoc(userID: String, completion: @escaping ([QueryDocumentSnapshot]?) -> ()) {
+//
+//        db.collection("users/\(userID)").getDocuments() { (querySnapshot, err) in
+//            if let err = err {
+//                print("Error getting documents: \(err)")
+//            } else {
+//                var newData = [QueryDocumentSnapshot]()
+//
+//                for document in querySnapshot!.documents {
+//                    print("\(document.documentID) => \(document.data())")
+//                    newData.append(document)
+//
+//                }
+//
+//                completion(newData)
+//            }
+//        }
+//
+//    }
     
     
     func authAnonymous(completion: @escaping ([QueryDocumentSnapshot]?) -> ()) {

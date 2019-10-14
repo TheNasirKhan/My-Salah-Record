@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
+import SwiftyJSON
 
 final class Profile {
     
-    static let sharedInstance = Profile()
+    static var sharedInstance = Profile()
     
     var id: String?
     var image: UIImage?
@@ -26,5 +29,16 @@ final class Profile {
     var phoneNumber: String?
     var job: String?
     var isAnonymous: Bool?
+    
+    init() {
+    }
+    
+    
+    init(userData: DocumentSnapshot) {
+        let data = JSON(userData.data())
+        
+        id = userData.documentID
+        name = data[""].stringValue
+    }
     
 }

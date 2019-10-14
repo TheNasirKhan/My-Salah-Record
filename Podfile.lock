@@ -117,6 +117,7 @@ PODS:
   - nanopb/decode (0.3.901)
   - nanopb/encode (0.3.901)
   - Protobuf (3.6.1)
+  - SwiftyJSON (5.0.0)
   - Toaster (2.1.1)
 
 DEPENDENCIES:
@@ -125,6 +126,7 @@ DEPENDENCIES:
   - Firebase/Firestore
   - Former
   - KeychainSwift
+  - SwiftyJSON
   - Toaster
 
 SPEC REPOS:
@@ -150,6 +152,7 @@ SPEC REPOS:
     - leveldb-library
     - nanopb
     - Protobuf
+    - SwiftyJSON
     - Toaster
 
 SPEC CHECKSUMS:
@@ -174,8 +177,9 @@ SPEC CHECKSUMS:
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
 
-PODFILE CHECKSUM: 49b100d3a287a6d001c78a4a3c4ab9a1cc90f0b9
+PODFILE CHECKSUM: 966e67cba5b3dfa5b662c8f36163aaa18e6b7649
 
 COCOAPODS: 1.6.1

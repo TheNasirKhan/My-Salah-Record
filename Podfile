@@ -13,6 +13,7 @@ target 'My Salah Record' do
   pod 'Toaster'
   pod 'Former'
   pod 'KeychainSwift'
+  pod 'SwiftyJSON'
 
 
   target 'My Salah RecordTests' do
