@@ -28,6 +28,7 @@ final class SettingsVC: FormViewController {
         
         
     }
+    
     private lazy var formerInputAccessoryView: FormerInputAccessoryView = FormerInputAccessoryView(former: self.former)
     
     fileprivate lazy var imageRow: LabelRowFormer<ProfileImageCell> = {
@@ -43,15 +44,15 @@ final class SettingsVC: FormViewController {
     }()
     
     private lazy var informationSection: SectionFormer = {
-        let nicknameRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
-            $0.titleLabel.text = "Nickname"
-            $0.textField.inputAccessoryView = self?.formerInputAccessoryView
-            }.configure {
-                $0.placeholder = "Add your nickname"
-                $0.text = Profile.sharedInstance.nickname
-            }.onTextChanged {
-                Profile.sharedInstance.nickname = $0
-        }
+//        let nicknameRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
+//            $0.titleLabel.text = "Nickname"
+//            $0.textField.inputAccessoryView = self?.formerInputAccessoryView
+//            }.configure {
+//                $0.placeholder = "Add your nickname"
+//                $0.text = Profile.sharedInstance.nickname
+//            }.onTextChanged {
+//                Profile.sharedInstance.nickname = $0
+//        }
         let locationRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
             $0.titleLabel.text = "Location"
             $0.textField.inputAccessoryView = self?.formerInputAccessoryView
@@ -71,15 +72,15 @@ final class SettingsVC: FormViewController {
             }.onTextChanged {
                 Profile.sharedInstance.phoneNumber = $0
         }
-        let jobRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
-            $0.titleLabel.text = "Job"
-            $0.textField.inputAccessoryView = self?.formerInputAccessoryView
-            }.configure {
-                $0.placeholder = "Add your job"
-                $0.text = Profile.sharedInstance.job
-            }.onTextChanged {
-                Profile.sharedInstance.job = $0
-        }
+//        let jobRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
+//            $0.titleLabel.text = "Job"
+//            $0.textField.inputAccessoryView = self?.formerInputAccessoryView
+//            }.configure {
+//                $0.placeholder = "Add your job"
+//                $0.text = Profile.sharedInstance.job
+//            }.onTextChanged {
+//                Profile.sharedInstance.job = $0
+//        }
         //        let peroidRow = InlinePickerRowFormer<ProfileLabelCell, String>(instantiateType: .Nib(nibName: "ProfileLabelCell")) {
         //            $0.titleLabel.text = "Period Length"
         //            }.configure {
@@ -115,8 +116,8 @@ final class SettingsVC: FormViewController {
                 self.alert(title: "Signout", message: "Are you sure you want to signout? \(Auth.auth().currentUser!.isAnonymous ? "Your data on this device will be lost" : "You can still access your data when returned")", actionTitle: "Signout") {
                     do {
                         try Auth.auth().signOut()
-                        self.dismiss(animated: true, completion: {});
-                        self.navigationController?.popViewController(animated: true);
+                        guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "RootLogin") else { return }
+                        self.present(vc, animated: true, completion: nil)
                     } catch let err {
                         print(err)
                     }
@@ -192,20 +193,6 @@ final class SettingsVC: FormViewController {
             }.onTextChanged {
                 Profile.sharedInstance.introduction = $0
         }
-        let moreRow = SwitchRowFormer<FormSwitchCell>() {
-            $0.titleLabel.text = "Add more information ?"
-            $0.titleLabel.textColor = .formerColor()
-            $0.titleLabel.font = .boldSystemFont(ofSize: 15)
-            $0.switchButton.onTintColor = .formerSubColor()
-            }.configure {
-                $0.switched = Profile.sharedInstance.moreInformation
-                $0.switchWhenSelected = true
-            }.onSwitchChanged { [weak self] in
-                Profile.sharedInstance.moreInformation = $0
-                self?.switchInfomationSection()
-        }
-        
-        // Create Headers
         
         let createHeader: ((String) -> ViewFormer) = { text in
             return LabelViewFormer<FormLabelHeaderView>()
@@ -219,12 +206,8 @@ final class SettingsVC: FormViewController {
         
         let imageSection = SectionFormer(rowFormer: imageRow)
             .set(headerViewFormer: createHeader("Profile Image"))
-        //        let introductionSection = SectionFormer(rowFormer: introductionRow)
-        //            .set(headerViewFormer: createHeader("Introduction"))
-        let aboutSection = SectionFormer(rowFormer: nameRow, genderRow, originRow, birthdayRow)
+        let aboutSection = SectionFormer(rowFormer: nameRow, genderRow, originRow, birthdayRow, introductionRow)
             .set(headerViewFormer: createHeader("About"))
-        //        let moreSection = SectionFormer(rowFormer: moreRow)
-        //            .set(headerViewFormer: createHeader("More Infomation"))
         
         former.append(sectionFormer: imageSection, aboutSection)
             .onCellSelected { [weak self] _ in
@@ -246,7 +229,7 @@ final class SettingsVC: FormViewController {
     
     private func switchInfomationSection() {
         if Profile.sharedInstance.moreInformation {
-            former.insertUpdate(sectionFormer: informationSection, toSection: former.numberOfSections, rowAnimation: .top)
+            former.insertUpdate(sectionFormer: informationSection, toSection: former.numberOfSections - 1, rowAnimation: .top)
         } else {
             former.removeUpdate(sectionFormer: informationSection, rowAnimation: .top)
         }

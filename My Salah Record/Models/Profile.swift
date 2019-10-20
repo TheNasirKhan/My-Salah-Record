@@ -19,26 +19,57 @@ final class Profile {
     var image: UIImage?
     var name: String?
     var gender: String?
-    var periodcycle: String?
     var origin: String?
     var birthDay: Date?
-    var introduction: String?
-    var moreInformation = false
-    var nickname: String?
     var location: String?
     var phoneNumber: String?
-    var job: String?
-    var isAnonymous: Bool?
+    var introduction: String?
+    var startedDate: Date?
+    
+    //For Female
+    var periodcycle: String?
+    var cycleLength: String?
+    var moreInformation = false
     
     init() {
     }
     
-    
     init(userData: DocumentSnapshot) {
-        let data = JSON(userData.data())
+        let data = JSON(userData.data() ?? [:])
         
         id = userData.documentID
-        name = data[""].stringValue
+        name = data["name"].stringValue
+        gender = data["gender"].stringValue
+        origin = data["origin"].stringValue
+        birthDay = data["birthDay"].stringValue.toDate()
+        startedDate = data["startedDate"].stringValue.toDate()
+        location = data["location"].stringValue
+        phoneNumber = data["phoneNumber"].stringValue
+        introduction = data["introduction"].stringValue
+        periodcycle = data["periodcycle"].stringValue
+        cycleLength = data["cycleLength"].stringValue
+        
+        FirebaseFetcher.sharedInstance.getProfileImage(userID: id ?? "default", completionHandler: { (image) in
+            self.image = image
+        })
+        
+    }
+    
+    func toDict() -> [String: String] {
+        var dict = [String:String]()
+        
+        if let name = name { dict["name"] = name }
+        if let gender = gender { dict["gender"] = gender }
+        if let origin = origin { dict["origin"] = origin }
+        if let birthDay = birthDay?.toString() { dict["birthDay"] = birthDay }
+        if let startedDate = startedDate?.toString() { dict["startedDate"] = startedDate}
+        if let location = location { dict["location"] = location }
+        if let phoneNumber = phoneNumber { dict["phoneNumber"] = phoneNumber }
+        if let introduction = introduction { dict["introduction"] = introduction }
+        if let periodcycle = periodcycle { dict["periodcycle"] = periodcycle }
+        if let cycleLength = cycleLength { dict["cycleLength"] = cycleLength }
+        
+        return dict
     }
     
 }

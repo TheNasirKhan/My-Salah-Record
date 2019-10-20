@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension TodayVC : UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
+extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UITableViewDelegate, UITableViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
@@ -24,22 +24,26 @@ extension TodayVC : UICollectionViewDelegate, UICollectionViewDataSource, UITabl
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return salahs.count + 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == 0 {
+        switch indexPath.row {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "DatesCell", for: indexPath) as! DatesCell
+            
+            cell.englishDate.text = "11-11-2011"
+            cell.islamicDate.text = "11-11-2011"
+            cell.location.text = "Karachi/Islamabad"
+            cell.joiningDate.text = "11-11-2011"
+            
+            return cell
+        default:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Qcell", for: indexPath)
             
             return cell
         }
         
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! SalahTimingCell
-        
-        cell.title.text = salahs[indexPath.row - 1]
-        
-        return cell
     }
 }

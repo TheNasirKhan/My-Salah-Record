@@ -1,45 +1,25 @@
 //
-//  TodayVC.swift
+//  HomeVC.swift
 //  My Salah Record
 //
-//  Created by Nasir Khan on 13/11/2018.
-//  Copyright © 2018 Techwisely. All rights reserved.
+//  Created by Nasir Khan on 20/10/2019.
+//  Copyright © 2019 Techwisely. All rights reserved.
 //
 
 import UIKit
-import Firebase
-import FirebaseFirestore
 
+class TodaysVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-class TodayVC : UIViewController {
-    
-    @IBOutlet weak var btnoAddNumber: UIButton!
-    @IBOutlet weak var lblAddNumber: UILabel!
-    @IBOutlet weak var vuAddNumber: UIView!
-    @IBOutlet weak var constFooterHeight: NSLayoutConstraint!
-    
     @IBOutlet weak var table: UITableView!
+    
     let salahs = ["Fajar", "Zohar", "Asar", "Maghrib", "Isha"]
     var todayTimes:[(AKPrayerTime.TimeNames, Any)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         table.tableFooterView = UIView()
-        setup()
-    }
-    
-    func setup() {
         setupPrayers()
-        setupLoginButton()
     }
-    
-    func setupLoginButton() {
-        btnoAddNumber.roundAndShadow()
-        let isAnonymous = Auth.auth().currentUser!.isAnonymous
-        vuAddNumber.isHidden = !isAnonymous
-        constFooterHeight.constant = isAnonymous ? 60 : 0
-    }
-    
     
     func setupPrayers() {
         let prayerKit:AKPrayerTime = AKPrayerTime(lat: 23.810332, lng: 90.4125181)
@@ -61,7 +41,18 @@ class TodayVC : UIViewController {
         
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return todayTimes.count
+    }
     
-    
-    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "SalahTimingCell", for: indexPath) as! SalahTimingCell
+        
+        let (timeName, time) = todayTimes[indexPath.row]
+        cell.title!.text = timeName.toString()
+        cell.time!.text = time as? String
+        
+        return cell
+    }
+
 }

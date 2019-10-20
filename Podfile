@@ -14,6 +14,7 @@ target 'My Salah Record' do
   pod 'Former'
   pod 'KeychainSwift'
   pod 'SwiftyJSON'
+  pod 'Firebase/Storage'
 
 
   target 'My Salah RecordTests' do

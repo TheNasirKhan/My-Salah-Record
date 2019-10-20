@@ -37,3 +37,40 @@ extension UIColor {
 }
 
 
+extension String {
+    
+    func toDate(withFormat format: String = "yyyy-MM-dd HH:mm:ss")-> Date?{
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: "Asia/Riyadh")
+        dateFormatter.dateFormat = format
+        let date = dateFormatter.date(from: self)
+        
+        return date
+        
+    }
+}
+
+extension Date {
+    
+    func toString(withFormat format: String = "yyyy-MM-dd HH:mm:ss") -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone(identifier: "Asia/Riyadh")
+        dateFormatter.dateFormat = format
+        let str = dateFormatter.string(from: self)
+        
+        return str
+    }
+}
+
+extension String {
+    
+    var isValidName: Bool {
+        let RegEx = "^\\w{7,18}$"
+        let Test = NSPredicate(format:"SELF MATCHES %@", RegEx)
+        return Test.evaluate(with: self)
+    }
+    
+    
+}

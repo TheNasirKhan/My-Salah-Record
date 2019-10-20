@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CalenderVC : UIViewController {
+class HomeVC : UIViewController {
     
 }
 

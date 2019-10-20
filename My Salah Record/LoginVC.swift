@@ -19,6 +19,8 @@ class LoginVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
         btn_login.layer.cornerRadius = btn_login.bounds.height / 2
         txt_phone.attributedPlaceholder = NSAttributedString(string: "Phone Number",
                                                                attributes: [NSAttributedString.Key.foregroundColor: UIColor.white.withAlphaComponent(0.3)])
@@ -29,12 +31,7 @@ class LoginVC: UIViewController {
         
 //        let code = UserDefaults.standard.string(forKey: "authVerificationID")
         
-        if !(Auth.auth().currentUser?.uid ?? "").isEmpty {
-            FirebaseFetcher.sharedInstance.getDoc(userID: Auth.auth().currentUser!.uid) { (data) in
-                Profile.sharedInstance = Profile(userData: data!)
-                self.performSegue(withIdentifier: "Dashboard", sender: nil)
-            }
-        }
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,16 +39,17 @@ class LoginVC: UIViewController {
     }
     
     func toDoWithData(authResult:AuthDataResult)  {
-        
-        let user = authResult.user
-        let isAnonymous = user.isAnonymous  // true
-        let uid = user.uid
-        
-        Profile.sharedInstance.id = uid
-        
-        FirebaseFetcher.sharedInstance.addUser(userProfile: Profile.sharedInstance) {
-            DispatchQueue.main.async {
-                self.performSegue(withIdentifier: "EditProfileVC", sender: nil)
+        FirebaseFetcher.sharedInstance.getUser(userID: authResult.user.uid) { (document) in
+            if let data = document {
+                let userProfile = Profile(userData: data)
+                Profile.sharedInstance = userProfile
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabbarVC") else { return }
+                self.present(vc, animated: true, completion: nil)
+            } else {
+                Profile.sharedInstance.id = authResult.user.uid
+                Profile.sharedInstance.phoneNumber = authResult.user.phoneNumber
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileVC") else { return }
+                self.navigationController?.pushViewController(vc, animated: true)
             }
         }
     }
@@ -72,8 +70,8 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func btn_enter(_ sender: Any) {
-        
-        PhoneAuthProvider.provider().verifyPhoneNumber("+923452192410", uiDelegate: nil) { (verificationID, error) in
+//        txt_phone.text = "+923452192410"
+        PhoneAuthProvider.provider().verifyPhoneNumber(txt_phone.text ?? "", uiDelegate: nil) { (verificationID, error) in
             if let error = error {
                 self.popUp(message: error.localizedDescription)
                 return

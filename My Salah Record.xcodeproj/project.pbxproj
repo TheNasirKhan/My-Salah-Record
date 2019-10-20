@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		40C636714FA959B7229CAFA2 /* Pods_My_Salah_RecordUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0130D5214EEFBF129EECE0 /* Pods_My_Salah_RecordUITests.framework */; };
 		8814145A219A2CF70048303B /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88141459219A2CF70048303B /* TabbarVC.swift */; };
+		88353C03235C88000046F831 /* TodaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88353C02235C88000046F831 /* TodaysVC.swift */; };
+		88353C07235CC76A0046F831 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88353C06235CC76A0046F831 /* ProfileVC.swift */; };
+		88353C09235CC7B20046F831 /* ProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88353C08235CC7B20046F831 /* ProfileHeaderCell.swift */; };
+		8852335C235B226900CFC15E /* InitialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8852335B235B226900CFC15E /* InitialVC.swift */; };
 		888660B922A695B2002FA03B /* DynamicHeightCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888660B322A695B1002FA03B /* DynamicHeightCell.swift */; };
 		888660BA22A695B2002FA03B /* ProfileFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888660B422A695B2002FA03B /* ProfileFieldCell.swift */; };
 		888660BB22A695B2002FA03B /* ProfileImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 888660B522A695B2002FA03B /* ProfileImageCell.swift */; };
@@ -39,7 +43,6 @@
 		88E937BA22A4AC8200356C39 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937B922A4AC8200356C39 /* Profile.swift */; };
 		88EBD712223A21D600D66121 /* FirebaseFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD711223A21D600D66121 /* FirebaseFetcher.swift */; };
 		88EBD714223A2BBF00D66121 /* TodayVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */; };
-		88EBD716223A2C9D00D66121 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD715223A2C9D00D66121 /* User.swift */; };
 		88F220FB2238EF1E00309F72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88F220FA2238EF1E00309F72 /* GoogleService-Info.plist */; };
 		88F3438B219C5CB7004FC1DA /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F1F219B187A007280F1 /* Poppins-Black.ttf */; };
 		88F3438C219C5CB7004FC1DA /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F1D219B1878007280F1 /* Poppins-BlackItalic.ttf */; };
@@ -59,15 +62,13 @@
 		88F3439A219C5CB7004FC1DA /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F21219B187B007280F1 /* Poppins-SemiBoldItalic.ttf */; };
 		88F3439B219C5CB7004FC1DA /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F13219B1871007280F1 /* Poppins-Thin.ttf */; };
 		88F3439C219C5CB7004FC1DA /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F1C219B1878007280F1 /* Poppins-ThinItalic.ttf */; };
-		88F3439E219C64BA004FC1DA /* CalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3439D219C64BA004FC1DA /* CalenderVC.swift */; };
-		88F343A0219C6666004FC1DA /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3439F219C6666004FC1DA /* CalenderCell.swift */; };
 		88F3C12221A0043D008A46EB /* DatePickerTextFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3C12121A0043D008A46EB /* DatePickerTextFieldView.swift */; };
 		88F3C12421A00C6F008A46EB /* QazaCounterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3C12321A00C6F008A46EB /* QazaCounterCell.swift */; };
 		88F3C12621A00C9D008A46EB /* QazaVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F3C12521A00C9D008A46EB /* QazaVC.swift */; };
 		88F6CFEE22392C1000D1E450 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F6CFED22392C1000D1E450 /* LoginVC.swift */; };
 		88F73AB82352EB3C00340458 /* Ex+AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F73AB72352EB3C00340458 /* Ex+AppDelegate.swift */; };
 		88F73ABA2352F47E00340458 /* Ex+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F73AB92352F47E00340458 /* Ex+UIView.swift */; };
-		88F84F08219B01C3007280F1 /* TodayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F07219B01C3007280F1 /* TodayVC.swift */; };
+		88F84F08219B01C3007280F1 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F07219B01C3007280F1 /* HomeVC.swift */; };
 		88F84F0C219B03E2007280F1 /* WeeklyTopPerformers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F0B219B03E2007280F1 /* WeeklyTopPerformers.swift */; };
 		88F84F0E219B0A85007280F1 /* GlobalVariables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F0D219B0A84007280F1 /* GlobalVariables.swift */; };
 		88F84F24219B1B44007280F1 /* SalahTimingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88F84F23219B1B44007280F1 /* SalahTimingCell.swift */; };
@@ -101,6 +102,10 @@
 		4478F1F56D9B18D4FB886BEA /* Pods_My_Salah_RecordTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Salah_RecordTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		489F9C86B9550E455A112D8A /* Pods-My Salah RecordTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah RecordTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah RecordTests/Pods-My Salah RecordTests.debug.xcconfig"; sourceTree = "<group>"; };
 		88141459219A2CF70048303B /* TabbarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarVC.swift; sourceTree = "<group>"; };
+		88353C02235C88000046F831 /* TodaysVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysVC.swift; sourceTree = "<group>"; };
+		88353C06235CC76A0046F831 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		88353C08235CC7B20046F831 /* ProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileHeaderCell.swift; sourceTree = "<group>"; };
+		8852335B235B226900CFC15E /* InitialVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitialVC.swift; sourceTree = "<group>"; };
 		888660B322A695B1002FA03B /* DynamicHeightCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DynamicHeightCell.swift; sourceTree = "<group>"; };
 		888660B422A695B2002FA03B /* ProfileFieldCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileFieldCell.swift; sourceTree = "<group>"; };
 		888660B522A695B2002FA03B /* ProfileImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileImageCell.swift; sourceTree = "<group>"; };
@@ -137,18 +142,15 @@
 		88E937B922A4AC8200356C39 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		88EBD711223A21D600D66121 /* FirebaseFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFetcher.swift; sourceTree = "<group>"; };
 		88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodayVC+extension.swift"; sourceTree = "<group>"; };
-		88EBD715223A2C9D00D66121 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		88F220FA2238EF1E00309F72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88F220FC2238F0F900309F72 /* My Salah Record.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "My Salah Record.entitlements"; sourceTree = "<group>"; };
-		88F3439D219C64BA004FC1DA /* CalenderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderVC.swift; sourceTree = "<group>"; };
-		88F3439F219C6666004FC1DA /* CalenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
 		88F3C12121A0043D008A46EB /* DatePickerTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTextFieldView.swift; sourceTree = "<group>"; };
 		88F3C12321A00C6F008A46EB /* QazaCounterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaCounterCell.swift; sourceTree = "<group>"; };
 		88F3C12521A00C9D008A46EB /* QazaVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QazaVC.swift; sourceTree = "<group>"; };
 		88F6CFED22392C1000D1E450 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		88F73AB72352EB3C00340458 /* Ex+AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+AppDelegate.swift"; sourceTree = "<group>"; };
 		88F73AB92352F47E00340458 /* Ex+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+UIView.swift"; sourceTree = "<group>"; };
-		88F84F07219B01C3007280F1 /* TodayVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayVC.swift; sourceTree = "<group>"; };
+		88F84F07219B01C3007280F1 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		88F84F0B219B03E2007280F1 /* WeeklyTopPerformers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeeklyTopPerformers.swift; sourceTree = "<group>"; };
 		88F84F0D219B0A84007280F1 /* GlobalVariables.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GlobalVariables.swift; sourceTree = "<group>"; };
 		88F84F11219B1870007280F1 /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
@@ -297,8 +299,10 @@
 				88F84F0F219B184D007280F1 /* Fonts */,
 				88F84F0A219B03A6007280F1 /* Custom Cells */,
 				88F84F09219B01CB007280F1 /* TabbarVCs */,
+				8852335B235B226900CFC15E /* InitialVC.swift */,
 				88F6CFED22392C1000D1E450 /* LoginVC.swift */,
 				88E937AD22A49F4E00356C39 /* EditProfileVC.swift */,
+				88353C06235CC76A0046F831 /* ProfileVC.swift */,
 				88141459219A2CF70048303B /* TabbarVC.swift */,
 				888660CB22A69686002FA03B /* FormerInputAccessoryView.swift */,
 				888660CA22A6960F002FA03B /* Cells */,
@@ -353,7 +357,6 @@
 		88EBD70F223A21A800D66121 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				88EBD715223A2C9D00D66121 /* User.swift */,
 				88E937B922A4AC8200356C39 /* Profile.swift */,
 			);
 			path = Models;
@@ -370,10 +373,10 @@
 		88F84F09219B01CB007280F1 /* TabbarVCs */ = {
 			isa = PBXGroup;
 			children = (
-				88F84F07219B01C3007280F1 /* TodayVC.swift */,
+				88F84F07219B01C3007280F1 /* HomeVC.swift */,
 				88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */,
 				88F84F25219B2759007280F1 /* TopPerformersVC.swift */,
-				88F3439D219C64BA004FC1DA /* CalenderVC.swift */,
+				88353C02235C88000046F831 /* TodaysVC.swift */,
 				88F3C12521A00C9D008A46EB /* QazaVC.swift */,
 				8894DA4E23531B6D00977016 /* SettingsVC.swift */,
 			);
@@ -388,7 +391,7 @@
 				889722CB219B6D68008588E3 /* TopPerformersCell.swift */,
 				88F3C12121A0043D008A46EB /* DatePickerTextFieldView.swift */,
 				88F3C12321A00C6F008A46EB /* QazaCounterCell.swift */,
-				88F3439F219C6666004FC1DA /* CalenderCell.swift */,
+				88353C08235CC7B20046F831 /* ProfileHeaderCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -698,8 +701,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				88F3C12221A0043D008A46EB /* DatePickerTextFieldView.swift in Sources */,
+				88353C03235C88000046F831 /* TodaysVC.swift in Sources */,
 				888660CC22A69686002FA03B /* FormerInputAccessoryView.swift in Sources */,
-				88F84F08219B01C3007280F1 /* TodayVC.swift in Sources */,
+				88F84F08219B01C3007280F1 /* HomeVC.swift in Sources */,
 				88EBD712223A21D600D66121 /* FirebaseFetcher.swift in Sources */,
 				88F84F24219B1B44007280F1 /* SalahTimingCell.swift in Sources */,
 				88E937AE22A49F4E00356C39 /* EditProfileVC.swift in Sources */,
@@ -712,22 +716,22 @@
 				88F84F0C219B03E2007280F1 /* WeeklyTopPerformers.swift in Sources */,
 				88F84F26219B2759007280F1 /* TopPerformersVC.swift in Sources */,
 				888660B922A695B2002FA03B /* DynamicHeightCell.swift in Sources */,
+				88353C09235CC7B20046F831 /* ProfileHeaderCell.swift in Sources */,
 				88F3C12421A00C6F008A46EB /* QazaCounterCell.swift in Sources */,
 				88E937B322A4AA4B00356C39 /* String+FormerDemo.swift in Sources */,
 				8894DA4F23531B6D00977016 /* SettingsVC.swift in Sources */,
 				888660BC22A695B2002FA03B /* ProfileLabelCell.swift in Sources */,
 				88DF9F782284B59A00865C71 /* AKPrayerTime.swift in Sources */,
 				88F73AB82352EB3C00340458 /* Ex+AppDelegate.swift in Sources */,
+				8852335C235B226900CFC15E /* InitialVC.swift in Sources */,
 				88AE46F22199D49600F2EF7B /* AppDelegate.swift in Sources */,
 				88E937BA22A4AC8200356C39 /* Profile.swift in Sources */,
 				88F73ABA2352F47E00340458 /* Ex+UIView.swift in Sources */,
-				88F343A0219C6666004FC1DA /* CalenderCell.swift in Sources */,
 				8814145A219A2CF70048303B /* TabbarVC.swift in Sources */,
-				88F3439E219C64BA004FC1DA /* CalenderVC.swift in Sources */,
-				88EBD716223A2C9D00D66121 /* User.swift in Sources */,
 				88AE46FA2199D49600F2EF7B /* My_Salah_Record.xcdatamodeld in Sources */,
 				88EBD714223A2BBF00D66121 /* TodayVC+extension.swift in Sources */,
 				888660BD22A695B2002FA03B /* CenterLabelCell.swift in Sources */,
+				88353C07235CC76A0046F831 /* ProfileVC.swift in Sources */,
 				88E937B422A4AA4B00356C39 /* UIColor+FormerDemo.swift in Sources */,
 				88F6CFEE22392C1000D1E450 /* LoginVC.swift in Sources */,
 				888660BE22A695B2002FA03B /* ColorListCell.swift in Sources */,
