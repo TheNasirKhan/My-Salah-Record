@@ -12,12 +12,24 @@ class ProfileHeaderCell: UITableViewCell {
 
     @IBOutlet weak var imgBG: UIImageView!
     @IBOutlet weak var vuBG: UIView!
-    @IBOutlet weak var vu_triangle: UIView!
+    @IBOutlet weak var imgProfile: UIImageView!
+    @IBOutlet weak var vuImgProfile: UIView!
+    @IBOutlet weak var vuCreatePost: UIView!
+    
+    @IBOutlet weak var imgCreatePost: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-//        vu_triangle.backgroundColor = .clear
+        
+        vuCreatePost.lowRoundAndShadow()
+        vuImgProfile.roundAndShadow()
+        imgProfile.layer.cornerRadius = 15
+        imgCreatePost.completeRound()
+//        vuCreatePost.roundBorder()
         
     }
-
+    
 }
+
+
+

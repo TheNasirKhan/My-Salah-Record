@@ -23,12 +23,13 @@ final class EditProfileVC: FormViewController {
         if  profile.name != nil && profile.birthDay != nil {
             Profile.sharedInstance.id = Auth.auth().currentUser!.uid
             Profile.sharedInstance.startedDate = Date()
-            FirebaseFetcher.sharedInstance.addUser(userProfile: Profile.sharedInstance) {
-                DispatchQueue.main.async {
-                    guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabbarVC") else { return }
-                    self.present(vc, animated: true, completion: nil)
-                }
+            
+            DispatchQueue.main.async {
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "LocationVC") else { return }
+                self.present(vc, animated: true, completion: nil)
             }
+            
+            
         } else {
             self.popUp(message: "Please provide your valid Name and Date of Birth")
         }
@@ -49,15 +50,15 @@ final class EditProfileVC: FormViewController {
     }()
     
     private lazy var informationSection: SectionFormer = {
-        let locationRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
-            $0.titleLabel.text = "Location"
-            $0.textField.inputAccessoryView = self?.formerInputAccessoryView
-            }.configure {
-                $0.placeholder = "Add your location"
-                $0.text = Profile.sharedInstance.location
-            }.onTextChanged {
-                Profile.sharedInstance.location = $0
-        }
+//        let locationRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
+//            $0.titleLabel.text = "Location"
+//            $0.textField.inputAccessoryView = self?.formerInputAccessoryView
+//            }.configure {
+//                $0.placeholder = "Add your location"
+//                $0.text = Profile.sharedInstance.location
+//            }.onTextChanged {
+//                Profile.sharedInstance.location = $0
+//        }
         let periodRow = StepperRowFormer<FormStepperCell>(){
             $0.titleLabel.text = "Period Length"
             }.displayTextFromValue {

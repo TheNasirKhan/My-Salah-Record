@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 import SwiftyJSON
+import CoreLocation
 
 final class Profile {
     
@@ -21,10 +22,11 @@ final class Profile {
     var gender: String?
     var origin: String?
     var birthDay: Date?
-    var location: String?
+//    var location: String?
     var phoneNumber: String?
     var introduction: String?
     var startedDate: Date?
+    var location: GeoPoint?
     
     //For Female
     var periodcycle: String?
@@ -43,7 +45,7 @@ final class Profile {
         origin = data["origin"].stringValue
         birthDay = data["birthDay"].stringValue.toDate()
         startedDate = data["startedDate"].stringValue.toDate()
-        location = data["location"].stringValue
+        location = userData.get("location") as? GeoPoint ?? GeoPoint(latitude: 0.0, longitude: 0.0)
         phoneNumber = data["phoneNumber"].stringValue
         introduction = data["introduction"].stringValue
         periodcycle = data["periodcycle"].stringValue
@@ -55,8 +57,8 @@ final class Profile {
         
     }
     
-    func toDict() -> [String: String] {
-        var dict = [String:String]()
+    func toDict() -> [String: Any] {
+        var dict = [String:Any]()
         
         if let name = name { dict["name"] = name }
         if let gender = gender { dict["gender"] = gender }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class TodaysVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
@@ -22,7 +23,8 @@ class TodaysVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     }
     
     func setupPrayers() {
-        let prayerKit:AKPrayerTime = AKPrayerTime(lat: 23.810332, lng: 90.4125181)
+        let location = Profile.sharedInstance.location ?? GeoPoint(latitude: 21.3891, longitude: 39.8579)
+        let prayerKit:AKPrayerTime = AKPrayerTime(lat: location.latitude, lng: location.longitude)
         prayerKit.calculationMethod = .Makkah
         prayerKit.asrJuristic = .Hanafi
         prayerKit.outputFormat = .Time12

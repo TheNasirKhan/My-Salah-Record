@@ -62,6 +62,15 @@ extension Date {
         
         return str
     }
+    
+    func readable(withFormat format: String = "dd MMMM yyyy") -> String {
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = format
+        let str = dateFormatter.string(from: self)
+        
+        return str
+    }
 }
 
 extension String {

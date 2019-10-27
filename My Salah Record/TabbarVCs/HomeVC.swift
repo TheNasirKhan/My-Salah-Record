@@ -9,7 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
-
+import CoreLocation
 
 class HomeVC : UIViewController {
     
@@ -31,10 +31,31 @@ class HomeVC : UIViewController {
     }
     
     func setupLoginButton() {
-        btnoAddNumber.roundAndShadow()
+        btnoAddNumber.roundBorder()
         let isAnonymous = Auth.auth().currentUser!.isAnonymous
         vuAddNumber.isHidden = !isAnonymous
         constFooterHeight.constant = isAnonymous ? 60 : 0
     }
     
+    func getTimeZoneName(completion: @escaping (String?) -> ()) {
+        let location = Profile.sharedInstance.location ?? GeoPoint(latitude: 21.3891, longitude: 39.8579)
+        let loc = CLLocation(latitude: location.latitude, longitude: location.longitude)
+        CLGeocoder().reverseGeocodeLocation(loc) { (placemarks, error) in
+            if let err = error {
+                print(err.localizedDescription)
+            } else {
+                completion(placemarks?.last?.timeZone?.description)
+            }
+        }
+    }
+    
+    func getIslamicDate() -> String {
+        let dateNow = DateFormatter()
+        let islamicCalendar = Calendar.init(identifier: Calendar.Identifier.islamicCivil)
+        dateNow.calendar = islamicCalendar
+//        dateNow.locale = Locale.init(identifier: "ar_SA")
+        dateNow.dateFormat = "dd MMMM yyyy"
+        
+        return "\(dateNow.string(from: Date()))"
+    }
 }

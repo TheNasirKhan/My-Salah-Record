@@ -35,14 +35,18 @@
 		88AE470A2199D49800F2EF7B /* My_Salah_RecordTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE47092199D49800F2EF7B /* My_Salah_RecordTests.swift */; };
 		88AE47152199D49800F2EF7B /* My_Salah_RecordUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88AE47142199D49800F2EF7B /* My_Salah_RecordUITests.swift */; };
 		88AE47232199D67C00F2EF7B /* dp.png in Resources */ = {isa = PBXBuildFile; fileRef = 88AE47222199D67C00F2EF7B /* dp.png */; };
+		88DF1E4023642316009708A2 /* RoundShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DF1E3F23642316009708A2 /* RoundShadowView.swift */; };
+		88DF1E4223642979009708A2 /* PaidFeatures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DF1E4123642979009708A2 /* PaidFeatures.swift */; };
 		88DF9F782284B59A00865C71 /* AKPrayerTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DF9F772284B59A00865C71 /* AKPrayerTime.swift */; };
 		88E302DA2248A91900E739DA /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E302D92248A91900E739DA /* UIViewController+Extension.swift */; };
+		88E6B96623645EC900F2C3D0 /* UserPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E6B96523645EC900F2C3D0 /* UserPostCell.swift */; };
+		88E6B96823647B0200F2C3D0 /* LocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E6B96723647B0200F2C3D0 /* LocationVC.swift */; };
 		88E937AE22A49F4E00356C39 /* EditProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937AD22A49F4E00356C39 /* EditProfileVC.swift */; };
 		88E937B322A4AA4B00356C39 /* String+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937B122A4AA4A00356C39 /* String+FormerDemo.swift */; };
 		88E937B422A4AA4B00356C39 /* UIColor+FormerDemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937B222A4AA4B00356C39 /* UIColor+FormerDemo.swift */; };
 		88E937BA22A4AC8200356C39 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88E937B922A4AC8200356C39 /* Profile.swift */; };
 		88EBD712223A21D600D66121 /* FirebaseFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD711223A21D600D66121 /* FirebaseFetcher.swift */; };
-		88EBD714223A2BBF00D66121 /* TodayVC+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */; };
+		88EBD714223A2BBF00D66121 /* Ex+HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88EBD713223A2BBF00D66121 /* Ex+HomeVC.swift */; };
 		88F220FB2238EF1E00309F72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 88F220FA2238EF1E00309F72 /* GoogleService-Info.plist */; };
 		88F3438B219C5CB7004FC1DA /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F1F219B187A007280F1 /* Poppins-Black.ttf */; };
 		88F3438C219C5CB7004FC1DA /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 88F84F1D219B1878007280F1 /* Poppins-BlackItalic.ttf */; };
@@ -134,14 +138,18 @@
 		88AE47142199D49800F2EF7B /* My_Salah_RecordUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = My_Salah_RecordUITests.swift; sourceTree = "<group>"; };
 		88AE47162199D49800F2EF7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88AE47222199D67C00F2EF7B /* dp.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dp.png; sourceTree = "<group>"; };
+		88DF1E3F23642316009708A2 /* RoundShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundShadowView.swift; sourceTree = "<group>"; };
+		88DF1E4123642979009708A2 /* PaidFeatures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaidFeatures.swift; sourceTree = "<group>"; };
 		88DF9F772284B59A00865C71 /* AKPrayerTime.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AKPrayerTime.swift; sourceTree = "<group>"; };
 		88E302D92248A91900E739DA /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		88E6B96523645EC900F2C3D0 /* UserPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPostCell.swift; sourceTree = "<group>"; };
+		88E6B96723647B0200F2C3D0 /* LocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationVC.swift; sourceTree = "<group>"; };
 		88E937AD22A49F4E00356C39 /* EditProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileVC.swift; sourceTree = "<group>"; };
 		88E937B122A4AA4A00356C39 /* String+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+FormerDemo.swift"; sourceTree = "<group>"; };
 		88E937B222A4AA4B00356C39 /* UIColor+FormerDemo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+FormerDemo.swift"; sourceTree = "<group>"; };
 		88E937B922A4AC8200356C39 /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		88EBD711223A21D600D66121 /* FirebaseFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseFetcher.swift; sourceTree = "<group>"; };
-		88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TodayVC+extension.swift"; sourceTree = "<group>"; };
+		88EBD713223A2BBF00D66121 /* Ex+HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ex+HomeVC.swift"; sourceTree = "<group>"; };
 		88F220FA2238EF1E00309F72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		88F220FC2238F0F900309F72 /* My Salah Record.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "My Salah Record.entitlements"; sourceTree = "<group>"; };
 		88F3C12121A0043D008A46EB /* DatePickerTextFieldView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerTextFieldView.swift; sourceTree = "<group>"; };
@@ -289,6 +297,7 @@
 				88F220FC2238F0F900309F72 /* My Salah Record.entitlements */,
 				88AE47222199D67C00F2EF7B /* dp.png */,
 				88AE46F12199D49600F2EF7B /* AppDelegate.swift */,
+				88DF1E4123642979009708A2 /* PaidFeatures.swift */,
 				88F73AB72352EB3C00340458 /* Ex+AppDelegate.swift */,
 				88F84F0D219B0A84007280F1 /* GlobalVariables.swift */,
 				88DF9F772284B59A00865C71 /* AKPrayerTime.swift */,
@@ -302,6 +311,7 @@
 				8852335B235B226900CFC15E /* InitialVC.swift */,
 				88F6CFED22392C1000D1E450 /* LoginVC.swift */,
 				88E937AD22A49F4E00356C39 /* EditProfileVC.swift */,
+				88E6B96723647B0200F2C3D0 /* LocationVC.swift */,
 				88353C06235CC76A0046F831 /* ProfileVC.swift */,
 				88141459219A2CF70048303B /* TabbarVC.swift */,
 				888660CB22A69686002FA03B /* FormerInputAccessoryView.swift */,
@@ -341,6 +351,7 @@
 			children = (
 				88E302D92248A91900E739DA /* UIViewController+Extension.swift */,
 				88F73AB92352F47E00340458 /* Ex+UIView.swift */,
+				88DF1E3F23642316009708A2 /* RoundShadowView.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -374,7 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				88F84F07219B01C3007280F1 /* HomeVC.swift */,
-				88EBD713223A2BBF00D66121 /* TodayVC+extension.swift */,
+				88EBD713223A2BBF00D66121 /* Ex+HomeVC.swift */,
 				88F84F25219B2759007280F1 /* TopPerformersVC.swift */,
 				88353C02235C88000046F831 /* TodaysVC.swift */,
 				88F3C12521A00C9D008A46EB /* QazaVC.swift */,
@@ -392,6 +403,7 @@
 				88F3C12121A0043D008A46EB /* DatePickerTextFieldView.swift */,
 				88F3C12321A00C6F008A46EB /* QazaCounterCell.swift */,
 				88353C08235CC7B20046F831 /* ProfileHeaderCell.swift */,
+				88E6B96523645EC900F2C3D0 /* UserPostCell.swift */,
 			);
 			path = "Custom Cells";
 			sourceTree = "<group>";
@@ -702,9 +714,12 @@
 			files = (
 				88F3C12221A0043D008A46EB /* DatePickerTextFieldView.swift in Sources */,
 				88353C03235C88000046F831 /* TodaysVC.swift in Sources */,
+				88E6B96623645EC900F2C3D0 /* UserPostCell.swift in Sources */,
 				888660CC22A69686002FA03B /* FormerInputAccessoryView.swift in Sources */,
 				88F84F08219B01C3007280F1 /* HomeVC.swift in Sources */,
+				88DF1E4223642979009708A2 /* PaidFeatures.swift in Sources */,
 				88EBD712223A21D600D66121 /* FirebaseFetcher.swift in Sources */,
+				88DF1E4023642316009708A2 /* RoundShadowView.swift in Sources */,
 				88F84F24219B1B44007280F1 /* SalahTimingCell.swift in Sources */,
 				88E937AE22A49F4E00356C39 /* EditProfileVC.swift in Sources */,
 				888660BB22A695B2002FA03B /* ProfileImageCell.swift in Sources */,
@@ -729,7 +744,8 @@
 				88F73ABA2352F47E00340458 /* Ex+UIView.swift in Sources */,
 				8814145A219A2CF70048303B /* TabbarVC.swift in Sources */,
 				88AE46FA2199D49600F2EF7B /* My_Salah_Record.xcdatamodeld in Sources */,
-				88EBD714223A2BBF00D66121 /* TodayVC+extension.swift in Sources */,
+				88E6B96823647B0200F2C3D0 /* LocationVC.swift in Sources */,
+				88EBD714223A2BBF00D66121 /* Ex+HomeVC.swift in Sources */,
 				888660BD22A695B2002FA03B /* CenterLabelCell.swift in Sources */,
 				88353C07235CC76A0046F831 /* ProfileVC.swift in Sources */,
 				88E937B422A4AA4B00356C39 /* UIColor+FormerDemo.swift in Sources */,

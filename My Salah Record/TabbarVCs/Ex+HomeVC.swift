@@ -32,11 +32,14 @@ extension HomeVC : UICollectionViewDelegate, UICollectionViewDataSource, UITable
         switch indexPath.row {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "DatesCell", for: indexPath) as! DatesCell
+            let profile = Profile.sharedInstance
             
-            cell.englishDate.text = "11-11-2011"
-            cell.islamicDate.text = "11-11-2011"
-            cell.location.text = "Karachi/Islamabad"
-            cell.joiningDate.text = "11-11-2011"
+            cell.englishDate.text = Date().readable()
+            cell.joiningDate.text = profile.startedDate?.readable()
+            cell.islamicDate.text = getIslamicDate()
+            getTimeZoneName { (timeZone) in
+                cell.location.text = timeZone ?? "KSA"
+            }
             
             return cell
         default:

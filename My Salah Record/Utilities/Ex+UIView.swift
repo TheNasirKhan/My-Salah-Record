@@ -55,21 +55,40 @@ extension UIView {
         self.clipsToBounds = true
     }
     
-    func roundAndShadow() {
+    func roundAndShadowProfile() {
+        self.layer.masksToBounds = false
+        self.layer.cornerRadius = 20
         
+        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.layer.cornerRadius).cgPath
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        self.layer.shadowOpacity = 0.6
+        self.layer.shadowRadius = 3.0
+    }
+    
+    func roundAndShadow() {
+        self.layer.cornerRadius = 15
+        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
+        self.layer.shadowRadius = 3.0
+        self.layer.shadowOpacity = 0.6
+        
+    }
+    
+    func lowRoundAndShadow() {
+        self.layer.cornerRadius = 10
+        self.layer.shadowColor = UIColor.lightGray.cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.layer.shadowRadius = 1.0
+        self.layer.shadowOpacity = 0.63
+        
+    }
+    
+    func roundBorder() {
         self.layer.masksToBounds = false
         self.layer.cornerRadius = 10
         self.layer.borderWidth = 1
         self.layer.borderColor = UIColor.black.cgColor
-        
-        
-//        self.layer.masksToBounds = false
-//        self.layer.cornerRadius = 10
-//        self.layer.shadowColor = UIColor.lightGray.cgColor
-//        self.layer.shadowPath = UIBezierPath(roundedRect: self.bounds, cornerRadius: self.layer.cornerRadius).cgPath
-//        self.layer.shadowOffset = CGSize(width: 0.0, height: 3.0)
-//        self.layer.shadowOpacity = 0.6
-//        self.layer.shadowRadius = 3.0
     }
     
     func roundCorners(corners: UIRectCorner, radius: CGFloat) {

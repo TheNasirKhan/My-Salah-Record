@@ -53,15 +53,15 @@ final class SettingsVC: FormViewController {
 //            }.onTextChanged {
 //                Profile.sharedInstance.nickname = $0
 //        }
-        let locationRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
-            $0.titleLabel.text = "Location"
-            $0.textField.inputAccessoryView = self?.formerInputAccessoryView
-            }.configure {
-                $0.placeholder = "Add your location"
-                $0.text = Profile.sharedInstance.location
-            }.onTextChanged {
-                Profile.sharedInstance.location = $0
-        }
+//        let locationRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
+//            $0.titleLabel.text = "Location"
+//            $0.textField.inputAccessoryView = self?.formerInputAccessoryView
+//            }.configure {
+//                $0.placeholder = "Add your location"
+//                $0.text = Profile.sharedInstance.location
+//            }.onTextChanged {
+//                Profile.sharedInstance.location = $0
+//        }
         let phoneRow = TextFieldRowFormer<ProfileFieldCell>(instantiateType: .Nib(nibName: "ProfileFieldCell")) { [weak self] in
             $0.titleLabel.text = "Phone"
             $0.textField.keyboardType = .numberPad
