@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184AF0B2237A794300F47034 /* SalahFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184AF0B1237A794300F47034 /* SalahFetcher.swift */; };
+		184AF0B4237A79CB00F47034 /* TodaySalah.swift in Sources */ = {isa = PBXBuildFile; fileRef = 184AF0B3237A79CB00F47034 /* TodaySalah.swift */; };
 		40C636714FA959B7229CAFA2 /* Pods_My_Salah_RecordUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A0130D5214EEFBF129EECE0 /* Pods_My_Salah_RecordUITests.framework */; };
 		8814145A219A2CF70048303B /* TabbarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88141459219A2CF70048303B /* TabbarVC.swift */; };
 		88353C03235C88000046F831 /* TodaysVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88353C02235C88000046F831 /* TodaysVC.swift */; };
@@ -102,6 +104,8 @@
 		003ACA1A5CAC49154B654232 /* Pods-My Salah RecordUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah RecordUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah RecordUITests/Pods-My Salah RecordUITests.release.xcconfig"; sourceTree = "<group>"; };
 		10E57324E277B19DC4B5D010 /* Pods-My Salah Record.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah Record.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah Record/Pods-My Salah Record.debug.xcconfig"; sourceTree = "<group>"; };
 		160440C389FE3CCE91D7F5CA /* Pods-My Salah RecordTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah RecordTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah RecordTests/Pods-My Salah RecordTests.release.xcconfig"; sourceTree = "<group>"; };
+		184AF0B1237A794300F47034 /* SalahFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalahFetcher.swift; sourceTree = "<group>"; };
+		184AF0B3237A79CB00F47034 /* TodaySalah.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaySalah.swift; sourceTree = "<group>"; };
 		1862ACB16BCAE26B7A8F96EF /* Pods-My Salah RecordUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah RecordUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah RecordUITests/Pods-My Salah RecordUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		4478F1F56D9B18D4FB886BEA /* Pods_My_Salah_RecordTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_My_Salah_RecordTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		489F9C86B9550E455A112D8A /* Pods-My Salah RecordTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-My Salah RecordTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-My Salah RecordTests/Pods-My Salah RecordTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -369,6 +373,7 @@
 			isa = PBXGroup;
 			children = (
 				88E937B922A4AC8200356C39 /* Profile.swift */,
+				184AF0B3237A79CB00F47034 /* TodaySalah.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -377,6 +382,7 @@
 			isa = PBXGroup;
 			children = (
 				88EBD711223A21D600D66121 /* FirebaseFetcher.swift */,
+				184AF0B1237A794300F47034 /* SalahFetcher.swift */,
 			);
 			path = Fetcher;
 			sourceTree = "<group>";
@@ -719,6 +725,7 @@
 				88F84F08219B01C3007280F1 /* HomeVC.swift in Sources */,
 				88DF1E4223642979009708A2 /* PaidFeatures.swift in Sources */,
 				88EBD712223A21D600D66121 /* FirebaseFetcher.swift in Sources */,
+				184AF0B2237A794300F47034 /* SalahFetcher.swift in Sources */,
 				88DF1E4023642316009708A2 /* RoundShadowView.swift in Sources */,
 				88F84F24219B1B44007280F1 /* SalahTimingCell.swift in Sources */,
 				88E937AE22A49F4E00356C39 /* EditProfileVC.swift in Sources */,
@@ -743,6 +750,7 @@
 				88E937BA22A4AC8200356C39 /* Profile.swift in Sources */,
 				88F73ABA2352F47E00340458 /* Ex+UIView.swift in Sources */,
 				8814145A219A2CF70048303B /* TabbarVC.swift in Sources */,
+				184AF0B4237A79CB00F47034 /* TodaySalah.swift in Sources */,
 				88AE46FA2199D49600F2EF7B /* My_Salah_Record.xcdatamodeld in Sources */,
 				88E6B96823647B0200F2C3D0 /* LocationVC.swift in Sources */,
 				88EBD714223A2BBF00D66121 /* Ex+HomeVC.swift in Sources */,

@@ -13,13 +13,21 @@ class TodaysVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet weak var table: UITableView!
     
-    let salahs = ["Fajar", "Zohar", "Asar", "Maghrib", "Isha"]
     var todayTimes:[(AKPrayerTime.TimeNames, Any)] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         table.tableFooterView = UIView()
         setupPrayers()
+        
+        SalahFetcher.shared.getTodaySalahRecord(userProfile: Profile.sharedInstance) { (data) in
+            if let data = data {
+                TodaySalah.shared = TodaySalah(userData: data)
+            }
+            DispatchQueue.main.async {
+                self.table.reloadData()
+            }
+        }
     }
     
     func setupPrayers() {
@@ -53,6 +61,31 @@ class TodaysVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let (timeName, time) = todayTimes[indexPath.row]
         cell.title!.text = timeName.toString()
         cell.time!.text = time as? String
+        
+        let isShowSwitch = [0,2,3,5,6].contains(indexPath.row)
+        cell.switch.isHidden = !isShowSwitch
+        cell.performed.isHidden = !isShowSwitch
+        cell.indexPath = indexPath
+        
+        switch indexPath.row {
+        case 0:
+            cell.switch.setOn(TodaySalah.shared.fajar, animated: true)
+            cell.performed.text = TodaySalah.shared.fajar ? "Performed" : "Not Performed"
+        case 2:
+            cell.switch.setOn(TodaySalah.shared.zohor, animated: true)
+            cell.performed.text = TodaySalah.shared.zohor ? "Performed" : "Not Performed"
+        case 3:
+            cell.switch.setOn(TodaySalah.shared.asar, animated: true)
+            cell.performed.text = TodaySalah.shared.asar ? "Performed" : "Not Performed"
+        case 5:
+            cell.switch.setOn(TodaySalah.shared.maghrib, animated: true)
+            cell.performed.text = TodaySalah.shared.maghrib ? "Performed" : "Not Performed"
+        case 6:
+            cell.switch.setOn(TodaySalah.shared.isha, animated: true)
+            cell.performed.text = TodaySalah.shared.isha ? "Performed" : "Not Performed"
+        default:
+            print("default")
+        }
         
         return cell
     }
