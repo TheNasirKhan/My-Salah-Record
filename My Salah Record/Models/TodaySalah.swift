@@ -34,6 +34,7 @@ enum SalahType {
 final class TodaySalah {
     
     static var shared = TodaySalah()
+    static var lastDaySalah = TodaySalah()
     
     var fajar: Bool
     var zohor: Bool

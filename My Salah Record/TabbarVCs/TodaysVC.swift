@@ -21,9 +21,6 @@ class TodaysVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         setupPrayers()
         
         SalahFetcher.shared.getTodaySalahRecord(userProfile: Profile.sharedInstance) { (data) in
-            if let data = data {
-                TodaySalah.shared = TodaySalah(userData: data)
-            }
             DispatchQueue.main.async {
                 self.table.reloadData()
             }
@@ -69,25 +66,51 @@ class TodaysVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath.row {
         case 0:
-            cell.switch.setOn(TodaySalah.shared.fajar, animated: true)
-            cell.performed.text = TodaySalah.shared.fajar ? "Performed" : "Not Performed"
+            setSalahValue(switchButton: cell.switch, label: cell.performed, isPerformed: TodaySalah.shared.fajar)
         case 2:
-            cell.switch.setOn(TodaySalah.shared.zohor, animated: true)
-            cell.performed.text = TodaySalah.shared.zohor ? "Performed" : "Not Performed"
+            setSalahValue(switchButton: cell.switch, label: cell.performed, isPerformed: TodaySalah.shared.zohor)
         case 3:
-            cell.switch.setOn(TodaySalah.shared.asar, animated: true)
-            cell.performed.text = TodaySalah.shared.asar ? "Performed" : "Not Performed"
+            setSalahValue(switchButton: cell.switch, label: cell.performed, isPerformed: TodaySalah.shared.asar)
         case 5:
-            cell.switch.setOn(TodaySalah.shared.maghrib, animated: true)
-            cell.performed.text = TodaySalah.shared.maghrib ? "Performed" : "Not Performed"
+            setSalahValue(switchButton: cell.switch, label: cell.performed, isPerformed: TodaySalah.shared.maghrib)
         case 6:
-            cell.switch.setOn(TodaySalah.shared.isha, animated: true)
-            cell.performed.text = TodaySalah.shared.isha ? "Performed" : "Not Performed"
+            setSalahValue(switchButton: cell.switch, label: cell.performed, isPerformed: TodaySalah.shared.isha)
         default:
             print("default")
         }
         
+//        switch indexPath.row {
+//        case 0:
+//            cell.switch.isUserInteractionEnabled = !TodaySalah.shared.fajar
+//            cell.switch.setOn(TodaySalah.shared.fajar, animated: true)
+//            cell.performed.text = TodaySalah.shared.fajar ? "Performed" : "Not Performed"
+//        case 2:
+//            cell.switch.isUserInteractionEnabled = !TodaySalah.shared.zohor
+//            cell.switch.setOn(TodaySalah.shared.zohor, animated: true)
+//            cell.performed.text = TodaySalah.shared.zohor ? "Performed" : "Not Performed"
+//        case 3:
+//            cell.switch.isUserInteractionEnabled = !TodaySalah.shared.asar
+//            cell.switch.setOn(TodaySalah.shared.asar, animated: true)
+//            cell.performed.text = TodaySalah.shared.asar ? "Performed" : "Not Performed"
+//        case 5:
+//            cell.switch.isUserInteractionEnabled = !TodaySalah.shared.maghrib
+//            cell.switch.setOn(TodaySalah.shared.maghrib, animated: true)
+//            cell.performed.text = TodaySalah.shared.maghrib ? "Performed" : "Not Performed"
+//        case 6:
+//            cell.switch.isUserInteractionEnabled = !TodaySalah.shared.isha
+//            cell.switch.setOn(TodaySalah.shared.isha, animated: true)
+//            cell.performed.text = TodaySalah.shared.isha ? "Performed" : "Not Performed"
+//        default:
+//            print("default")
+//        }
+        
         return cell
+    }
+    
+    func setSalahValue(switchButton: UISwitch, label: UILabel, isPerformed: Bool) {
+        switchButton.isUserInteractionEnabled = !isPerformed
+        switchButton.setOn(isPerformed, animated: true)
+        label.text = isPerformed ? "Performed" : "Not Performed"
     }
 
 }

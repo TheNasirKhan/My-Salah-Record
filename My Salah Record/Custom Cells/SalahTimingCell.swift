@@ -34,9 +34,10 @@ class SalahTimingCell: UITableViewCell {
             default: print("default")
             }
             
-            SalahFetcher.shared.setSalah(userProfile: Profile.sharedInstance, todaySalah: TodaySalah.shared, salahType: salahType, isPerformed: true) {
+            SalahFetcher.shared.setSalah(userProfile: Profile.sharedInstance, todaySalah: TodaySalah.lastDaySalah, salahType: salahType, isPerformed: true) {
                 self.switch.isUserInteractionEnabled = false
                 self.performed.text = "Performed"
+                
             }
         }
     }
