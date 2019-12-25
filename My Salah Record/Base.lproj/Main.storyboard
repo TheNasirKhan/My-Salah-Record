@@ -380,7 +380,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nmI-d0-iYK">
-                                <rect key="frame" x="16" y="226" width="382" height="587"/>
+                                <rect key="frame" x="16" y="204" width="382" height="609"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="89" id="SLh-Gb-aDU" customClass="SalahTimingCell" customModule="My_Salah_Record" customModuleProvider="target">
@@ -590,6 +590,13 @@
                                     <outlet property="delegate" destination="W6M-f0-yZ1" id="FEc-Nd-bUu"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1D-h6-OHX">
+                                <rect key="frame" x="20" y="96" width="374" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="q1f-YO-6Zt"/>
+                                </constraints>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrZ-jK-OPs">
                                 <rect key="frame" x="86" y="139.5" width="203" height="1"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -600,6 +607,8 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="nmI-d0-iYK" firstAttribute="top" secondItem="G1D-h6-OHX" secondAttribute="bottom" constant="8" id="9ZD-S8-PdF"/>
+                            <constraint firstItem="G1D-h6-OHX" firstAttribute="top" secondItem="LeL-n8-74Q" secondAttribute="top" constant="8" id="9hS-p2-VAQ"/>
                             <constraint firstItem="IKv-Qd-HVn" firstAttribute="leading" secondItem="LeL-n8-74Q" secondAttribute="leading" constant="28" id="C5e-xi-8gv"/>
                             <constraint firstItem="HnT-2N-eDm" firstAttribute="leading" secondItem="LeL-n8-74Q" secondAttribute="leading" constant="28" id="Em8-8g-i5f"/>
                             <constraint firstAttribute="trailingMargin" secondItem="mrZ-jK-OPs" secondAttribute="trailing" constant="70" id="IAe-uF-E2t"/>
@@ -609,14 +618,18 @@
                             <constraint firstItem="HnT-2N-eDm" firstAttribute="top" secondItem="LeL-n8-74Q" secondAttribute="top" constant="18" id="Ngw-Ap-207"/>
                             <constraint firstItem="LeL-n8-74Q" firstAttribute="trailing" secondItem="IKv-Qd-HVn" secondAttribute="trailing" constant="58" id="Rth-ab-HT2"/>
                             <constraint firstItem="LeL-n8-74Q" firstAttribute="trailing" secondItem="nmI-d0-iYK" secondAttribute="trailing" constant="16" id="g8a-nZ-LrM"/>
+                            <constraint firstItem="G1D-h6-OHX" firstAttribute="leading" secondItem="LeL-n8-74Q" secondAttribute="leading" constant="20" id="m03-1W-jJb"/>
                             <constraint firstItem="nmI-d0-iYK" firstAttribute="leading" secondItem="LeL-n8-74Q" secondAttribute="leading" constant="16" id="p3N-hC-4WE"/>
                             <constraint firstItem="nmI-d0-iYK" firstAttribute="top" secondItem="IKv-Qd-HVn" secondAttribute="bottom" constant="8" id="tmk-bv-4Ix"/>
                             <constraint firstItem="mrZ-jK-OPs" firstAttribute="leading" secondItem="gbZ-U0-tNa" secondAttribute="leadingMargin" constant="70" id="uOw-hF-G7K"/>
+                            <constraint firstItem="LeL-n8-74Q" firstAttribute="trailing" secondItem="G1D-h6-OHX" secondAttribute="trailing" constant="20" id="ygh-ST-hCy"/>
                             <constraint firstItem="IKv-Qd-HVn" firstAttribute="top" secondItem="HnT-2N-eDm" secondAttribute="bottom" constant="12" id="z4W-tB-TlW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LeL-n8-74Q"/>
                         <variation key="default">
                             <mask key="subviews">
+                                <exclude reference="HnT-2N-eDm"/>
+                                <exclude reference="IKv-Qd-HVn"/>
                                 <exclude reference="mrZ-jK-OPs"/>
                             </mask>
                         </variation>
@@ -2023,7 +2036,7 @@ To access your data on any device</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="doD-Fe-P5S" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3634.7826086956525" y="2232.5892857142858"/>
+            <point key="canvasLocation" x="3626" y="2111"/>
         </scene>
     </scenes>
     <resources>

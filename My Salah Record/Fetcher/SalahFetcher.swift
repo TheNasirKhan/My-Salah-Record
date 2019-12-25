@@ -10,6 +10,8 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 import SwiftyJSON
+import FirebaseCore
+//import FirebaseFirestoreSwift
 
 class SalahFetcher {
     
@@ -19,6 +21,7 @@ class SalahFetcher {
     let storageRef = Storage.storage().reference()
     var ref: DocumentReference? = nil
     
+    //Today Salah Count Methods
     func getTodaySalahRecord(userProfile:Profile, completion: @escaping (DocumentSnapshot?) -> ()) {
         db.collection("todaySalah").document(userProfile.id!).getDocument { (document, error) in
             if let document = document, document.exists {
@@ -65,12 +68,15 @@ class SalahFetcher {
             }
         }
         SalahFetcher.shared.getTodaySalahRecord(userProfile: Profile.sharedInstance) { (data) in }
+        increamentTotalCount(userProfile: userProfile, todaySalah: todaySalah, salahType: salahType) { }
+        increamentThisMonthTotalCount(userProfile: userProfile, todaySalah: todaySalah, salahType: salahType) { }
     }
     
+    // Total Salah Count Methods
     func getTotalCount(userProfile:Profile, todaySalah: TodaySalah , salahType: SalahType, completionHandler:  @escaping (Int?) -> ()) {
-        db.collection("salahCount").document(userProfile.id!).getDocument { (document, error) in
+        db.collection("salahCount").document(userProfile.id!).collection("totalCount").document(salahType.getSalahName()).getDocument { (document, error) in
             if let document = document, document.exists {
-                let data = JSON(document.data() ?? [:]).intValue
+                let data = JSON(document.data() ?? [:])["count"].intValue
                 completionHandler(data)
             } else {
                 completionHandler(nil)
@@ -79,16 +85,79 @@ class SalahFetcher {
     }
     
     func increamentTotalCount(userProfile:Profile, todaySalah: TodaySalah , salahType: SalahType, completionHandler:  @escaping () -> ()) {
-        
-        db.collection("salahCount").document(userProfile.id!).collection("totalCount").document("").updateData([
-            "totalCount": 1
-        ]) { err in
-            if let err = err {
-                print("Error updating document: \(err)")
+        getTotalCount(userProfile: userProfile, todaySalah: todaySalah, salahType: salahType) { (count) in
+            if let count = count {
+                self.db.collection("salahCount").document(userProfile.id!).collection("totalCount").document(salahType.getSalahName()).updateData([
+                    "count": count + 1
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("Document successfully updated")
+                        completionHandler()
+                    }
+                }
             } else {
-                print("Document successfully updated")
-                completionHandler()
+                self.db.collection("salahCount").document(userProfile.id!).collection("totalCount").document(salahType.getSalahName()).setData([
+                    "count": 1
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("Document successfully updated")
+                        completionHandler()
+                    }
+                }
             }
         }
+    }
+    
+    // Total This Month Salah Count Methods
+    func getThisMonthTotalCount(userProfile:Profile, todaySalah: TodaySalah , salahType: SalahType, completionHandler:  @escaping (Int?) -> ()) {
+        db.collection("salahCount").document(userProfile.id!).collection("totalCount").document(salahType.getSalahName()).getDocument { (document, error) in
+            if let document = document, document.exists {
+                let data = JSON(document.data() ?? [:])["count"].intValue
+                completionHandler(data)
+            } else {
+                completionHandler(nil)
+            }
+        }
+    }
+    
+    func increamentThisMonthTotalCount(userProfile:Profile, todaySalah: TodaySalah , salahType: SalahType, completionHandler:  @escaping () -> ()) {
+        getTotalCount(userProfile: userProfile, todaySalah: todaySalah, salahType: salahType) { (count) in
+            if let count = count {
+                self.db.collection("salahCount").document(userProfile.id!).collection(Date().getThisMonth()).document(salahType.getSalahName()).updateData([
+                    "count": count + 1
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("Document successfully updated")
+                        completionHandler()
+                    }
+                }
+            } else {
+                self.db.collection("salahCount").document(userProfile.id!).collection(Date().getThisMonth()).document(salahType.getSalahName()).setData([
+                    "count": 1
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("Document successfully updated")
+                        completionHandler()
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+extension Date {
+    func getThisMonth() -> String {
+        let df = DateFormatter()
+        df.setLocalizedDateFormatFromTemplate("MMM-yyyy")
+        return df.string(from: self)
     }
 }
