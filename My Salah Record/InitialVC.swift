@@ -31,7 +31,7 @@ class InitialVC: UIViewController {
                 if let data = document {
                     Profile.sharedInstance = Profile(userData: data)
                     guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "TabbarVC") else { return }
-                    self.present(vc, animated: false, completion: nil)
+                    self.navigationController?.present(vc, animated: false, completion: nil)
                 } else {
                     guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "EditProfileVC") else { return }
                     self.navigationController?.pushViewController(vc, animated: false)

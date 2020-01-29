@@ -151,6 +151,10 @@ class SalahFetcher {
             }
         }
     }
+    
+    // Qaza Record
+    
+    
 }
 
 
