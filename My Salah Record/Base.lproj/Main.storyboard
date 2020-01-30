@@ -378,7 +378,7 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nmI-d0-iYK">
-                                <rect key="frame" x="16" y="204" width="382" height="609"/>
+                                <rect key="frame" x="16" y="104" width="382" height="709"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="89" id="SLh-Gb-aDU" customClass="SalahTimingCell" customModule="My_Salah_Record" customModuleProvider="target">
@@ -489,7 +489,7 @@
                                                     <rect key="frame" x="20" y="11" width="342" height="98"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YdP-IE-JS8">
-                                                            <rect key="frame" x="162" y="15" width="150" height="37"/>
+                                                            <rect key="frame" x="162" y="15" width="150" height="29"/>
                                                             <subviews>
                                                                 <button opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XW6-Ju-obe">
                                                                     <rect key="frame" x="8" y="9" width="20" height="20"/>
@@ -500,7 +500,7 @@
                                                                     <state key="normal" image="minus"/>
                                                                 </button>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="134" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="7" translatesAutoresizingMaskIntoConstraints="NO" id="ATZ-ue-tvw">
-                                                                    <rect key="frame" x="43" y="3" width="64" height="30"/>
+                                                                    <rect key="frame" x="43" y="3" width="64" height="22"/>
                                                                     <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="13"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
@@ -553,21 +553,43 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Acl-of-YkW">
-                                                            <rect key="frame" x="172" y="63" width="130" height="27"/>
+                                                            <rect key="frame" x="172" y="55" width="130" height="35"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="41" id="LPR-Tw-cKZ"/>
+                                                                <constraint firstAttribute="height" constant="35" id="LPR-Tw-cKZ"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="13"/>
                                                             <state key="normal" title="   Add Qaza Record   ">
                                                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             </state>
                                                         </button>
+                                                        <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="No. of days" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUN-Yc-UCa">
+                                                            <rect key="frame" x="8" y="55.5" width="149" height="34"/>
+                                                            <fontDescription key="fontDescription" name="Poppins-Regular" family="Poppins" pointSize="15"/>
+                                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                            <connections>
+                                                                <outlet property="delegate" destination="W6M-f0-yZ1" id="Otb-4F-oT5"/>
+                                                            </connections>
+                                                        </textField>
+                                                        <button hidden="YES" opaque="NO" alpha="0.5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEV-Av-j0F">
+                                                            <rect key="frame" x="310" y="62.5" width="20" height="20"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="20" id="VtO-Ia-ho7"/>
+                                                                <constraint firstAttribute="width" constant="20" id="eHY-Ys-nEN"/>
+                                                            </constraints>
+                                                            <state key="normal" image="information"/>
+                                                        </button>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="Acl-of-YkW" firstAttribute="top" secondItem="YdP-IE-JS8" secondAttribute="bottom" constant="11" id="1aF-ho-rAF"/>
+                                                        <constraint firstItem="FEV-Av-j0F" firstAttribute="leading" secondItem="Acl-of-YkW" secondAttribute="trailing" constant="8" id="3NV-97-wRb"/>
+                                                        <constraint firstItem="ZIn-Dy-62S" firstAttribute="leading" secondItem="ATZ-ue-tvw" secondAttribute="trailing" constant="15" id="4Xq-D7-fJd"/>
+                                                        <constraint firstItem="oUN-Yc-UCa" firstAttribute="leading" secondItem="Fer-65-XzM" secondAttribute="leading" constant="8" id="56r-c0-NC7"/>
+                                                        <constraint firstItem="ZIn-Dy-62S" firstAttribute="top" secondItem="Fer-65-XzM" secondAttribute="top" constant="24" id="5W8-Kd-3V2"/>
                                                         <constraint firstItem="YdP-IE-JS8" firstAttribute="top" secondItem="Fer-65-XzM" secondAttribute="top" constant="15" id="7H8-5C-M38"/>
+                                                        <constraint firstItem="oUN-Yc-UCa" firstAttribute="centerY" secondItem="Acl-of-YkW" secondAttribute="centerY" id="8fa-vr-h4H"/>
                                                         <constraint firstAttribute="bottom" secondItem="k5g-dw-g6t" secondAttribute="bottom" constant="16" id="I02-wd-Qmj"/>
+                                                        <constraint firstItem="FEV-Av-j0F" firstAttribute="centerY" secondItem="Acl-of-YkW" secondAttribute="centerY" id="Jou-IS-8Z5"/>
                                                         <constraint firstAttribute="trailing" secondItem="YdP-IE-JS8" secondAttribute="trailing" constant="30" id="JtD-cq-ejH"/>
                                                         <constraint firstAttribute="trailing" secondItem="k5g-dw-g6t" secondAttribute="trailing" constant="8" id="NWU-eR-20F"/>
                                                         <constraint firstItem="hPj-pL-LD0" firstAttribute="leading" secondItem="Fer-65-XzM" secondAttribute="leading" constant="8" id="P56-E8-roc"/>
@@ -575,6 +597,8 @@
                                                         <constraint firstAttribute="bottom" secondItem="Acl-of-YkW" secondAttribute="bottom" constant="8" id="dIA-oZ-5Xf"/>
                                                         <constraint firstItem="hPj-pL-LD0" firstAttribute="top" secondItem="Fer-65-XzM" secondAttribute="top" constant="18" id="kiR-ci-Df4"/>
                                                         <constraint firstItem="k5g-dw-g6t" firstAttribute="top" secondItem="Fer-65-XzM" secondAttribute="top" constant="16" id="qjU-tX-1Ux"/>
+                                                        <constraint firstItem="Acl-of-YkW" firstAttribute="leading" secondItem="oUN-Yc-UCa" secondAttribute="trailing" constant="15" id="r4d-g7-kLJ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="ZIn-Dy-62S" secondAttribute="trailing" constant="38" id="rw4-2Y-nhw"/>
                                                     </constraints>
                                                     <variation key="default">
                                                         <mask key="subviews">
@@ -591,7 +615,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="btnAddRecord" destination="Acl-of-YkW" id="21s-F2-Nvt"/>
+                                            <outlet property="btnDec" destination="XW6-Ju-obe" id="Ty1-aj-Y0B"/>
+                                            <outlet property="btnInc" destination="ZIn-Dy-62S" id="nYa-8A-sIg"/>
+                                            <outlet property="btnInfo" destination="FEV-Av-j0F" id="TfD-fX-3bK"/>
+                                            <outlet property="lblCount" destination="ATZ-ue-tvw" id="KNf-Fz-uzh"/>
                                             <outlet property="title" destination="hPj-pL-LD0" id="TPh-FE-tyo"/>
+                                            <outlet property="txtDays" destination="oUN-Yc-UCa" id="Ooh-ny-RqI"/>
+                                            <outlet property="vubg" destination="Fer-65-XzM" id="IzB-pp-iqj"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -601,10 +632,10 @@
                                 </connections>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1D-h6-OHX">
-                                <rect key="frame" x="20" y="96" width="374" height="100"/>
+                                <rect key="frame" x="20" y="96" width="374" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="q1f-YO-6Zt"/>
+                                    <constraint firstAttribute="height" id="q1f-YO-6Zt"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mrZ-jK-OPs">
@@ -646,6 +677,12 @@
                     </view>
                     <navigationItem key="navigationItem" title="Qaza Record" id="vID-pD-EDl">
                         <barButtonItem key="backBarButtonItem" title=" " id="h5I-AS-T7X"/>
+                        <barButtonItem key="rightBarButtonItem" image="information-s" id="aQG-jK-nu2">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="btnInfoActionNav:" destination="W6M-f0-yZ1" id="78g-Nb-8rl"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="table" destination="nmI-d0-iYK" id="Sob-UB-Kgv"/>
@@ -2056,6 +2093,8 @@ To access your data on any device</string>
         <image name="badge 4" width="128" height="128"/>
         <image name="dp.png" width="638" height="639"/>
         <image name="home" width="20" height="20"/>
+        <image name="information" width="64" height="64"/>
+        <image name="information-s" width="24" height="24"/>
         <image name="minus" width="128" height="128"/>
         <image name="notification" width="64" height="64"/>
         <image name="placeholder" width="512" height="512"/>

@@ -11,16 +11,20 @@ import UIKit
 class QazaCounterCell: UITableViewCell {
 
     @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var btnInc: UIButton!
+    @IBOutlet weak var btnDec: UIButton!
+    @IBOutlet weak var lblCount: UILabel!
+    @IBOutlet weak var btnInfo: UIButton!
+    @IBOutlet weak var btnAddRecord: UIButton!
+    @IBOutlet weak var txtDays: UITextField!
+    @IBOutlet weak var vubg: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
 }
