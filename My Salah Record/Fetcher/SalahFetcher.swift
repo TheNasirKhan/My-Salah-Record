@@ -153,7 +153,59 @@ class SalahFetcher {
     }
     
     // Qaza Record
+    func getQazaCount(userProfile:Profile, salahType: SalahType, completionHandler:  @escaping (Int?) -> ()) {
+        db.collection("qazaCount").document(userProfile.id!).getDocument { (document, error) in
+            if let document = document, document.exists {
+                let data = JSON(document.data() ?? [:])[salahType.getSalahName()].intValue
+                completionHandler(data)
+            } else {
+                completionHandler(nil)
+            }
+        }
+    }
     
+    func setQazaCount(userProfile:Profile, todaySalah: TodaySalah, salahType: SalahType, count: Int, completionHandler:  @escaping () -> ()) {
+        getTotalCount(userProfile: userProfile, todaySalah: todaySalah, salahType: salahType) { (count) in
+            self.db.collection("qazaCount").document(userProfile.id!).setData([
+                salahType.getSalahName(): count ?? 0
+            ]) { err in
+                if let err = err {
+                    print("Error updating document: \(err)")
+                } else {
+                    print("Document successfully updated")
+                    completionHandler()
+                }
+            }
+        }
+    }
+    
+    func incDecQazaCount(userProfile:Profile, todaySalah: TodaySalah, salahType: SalahType, isInc: Bool, completionHandler:  @escaping () -> ()) {
+        getTotalCount(userProfile: userProfile, todaySalah: todaySalah, salahType: salahType) { (count) in
+            if let count = count {
+                self.db.collection("qazaCount").document(userProfile.id!).updateData([
+                    salahType.getSalahName(): count + (isInc ? 1 : -1)
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("Document successfully updated")
+                        completionHandler()
+                    }
+                }
+            } else {
+                self.db.collection("qazaCount").document(userProfile.id!).setData([
+                    salahType.getSalahName(): (isInc ? 1 : 0)
+                ]) { err in
+                    if let err = err {
+                        print("Error updating document: \(err)")
+                    } else {
+                        print("Document successfully updated")
+                        completionHandler()
+                    }
+                }
+            }
+        }
+    }
     
 }
 

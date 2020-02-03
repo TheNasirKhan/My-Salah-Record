@@ -45,6 +45,15 @@ extension UIColor {
 }
 
 extension UIView {
+    func setBottomBorder() {
+        self.layer.backgroundColor = UIColor.white.cgColor
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor.groupTableViewBackground.cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 1.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 0.0
+    }
+    
     func completeRound() {
         self.layer.cornerRadius = self.frame.size.width / 2
         self.clipsToBounds = true
