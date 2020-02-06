@@ -20,6 +20,10 @@ class QazaVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        SalahFetcher.shared.getTotalQaza(userProfile: Profile.sharedInstance) { (doc) in
+            self.table.reloadData()
+        }
     }
     
     @objc private func keyboardWillShow(notification: NSNotification) {
@@ -40,7 +44,24 @@ class QazaVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "countCell", for: indexPath) as! QazaCounterCell
         
+        let rec = TotalQaza.shared
         cell.title.text = salahs[indexPath.row]
+        
+        switch indexPath.row {
+        case 0:
+            cell.lblCount.text = "\(rec.fajar ?? 0)"
+            case 1:
+            cell.lblCount.text = "\(rec.zohor ?? 0)"
+            case 2:
+            cell.lblCount.text = "\(rec.asar ?? 0)"
+            case 3:
+            cell.lblCount.text = "\(rec.maghrib ?? 0)"
+            case 4:
+            cell.lblCount.text = "\(rec.isha ?? 0)"
+        default:
+            cell.lblCount.text = "\(0)"
+        }
+        
         
         cell.btnAddRecord.addTarget(self, action: #selector(self.btnAddRecordAction(_:)), for: .touchUpInside)
         cell.btnInc.addTarget(self, action: #selector(self.btnIncAction(_:)), for: .touchUpInside)
@@ -59,7 +80,7 @@ class QazaVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let indexPath = IndexPath(row: index, section: 0)
         guard let cell = table.cellForRow(at: indexPath) as? QazaCounterCell else { return }
         
-        cell.lblCount.text = textField.text
+        
         
     }
     
@@ -67,11 +88,32 @@ class QazaVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let buttonPosition = sender.convert(CGPoint.zero, to: self.table)
         guard let indexPath = self.table.indexPathForRow(at:buttonPosition) else { return }
         guard let cell = table.cellForRow(at: indexPath) as? QazaCounterCell else { return }
-        
+        let textField = cell.txtDays!
         if cell.txtDays.isHidden {
             cell.txtDays.isHidden = false
             sender.setTitle("   Save   ", for: .normal)
             sender.roundBorder()
+        } else {
+            if textField.text?.isEmpty ?? true {
+                //Some Error
+            } else {
+                cell.lblCount.text = textField.text
+                var type = SalahType.fajar
+                
+                switch indexPath.row {
+                    case 0: type = .fajar
+                    case 1: type = .zohor
+                    case 2: type = .asar
+                    case 3: type = .maghrib
+                    case 4: type = .isha
+                default:
+                    type = .fajar
+                }
+                
+                SalahFetcher.shared.setQazaCount(userProfile: Profile.sharedInstance, salahType: type, count: Int(textField.text!)!) {
+                    
+                }
+            }
         }
         
     }

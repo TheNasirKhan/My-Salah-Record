@@ -65,3 +65,35 @@ final class TodaySalah {
     }
     
 }
+
+
+final class TotalQaza {
+    
+    static var shared = TotalQaza()
+    
+    var fajar: Int?
+    var zohor: Int?
+    var asar: Int?
+    var maghrib: Int?
+    var isha: Int?
+    
+    init() {
+        fajar = 0
+        zohor = 0
+        asar = 0
+        maghrib = 0
+        isha = 0
+    }
+    
+    init(data: DocumentSnapshot) {
+        let data = JSON(data.data() ?? [:])
+        
+        fajar = data[SalahType.fajar.getSalahName()].intValue
+        zohor = data[SalahType.zohor.getSalahName()].intValue
+        asar = data[SalahType.asar.getSalahName()].intValue
+        maghrib = data[SalahType.maghrib.getSalahName()].intValue
+        isha = data[SalahType.isha.getSalahName()].intValue
+        
+    }
+    
+}

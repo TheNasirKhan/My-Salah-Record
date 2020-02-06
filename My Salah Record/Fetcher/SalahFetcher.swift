@@ -153,6 +153,19 @@ class SalahFetcher {
     }
     
     // Qaza Record
+    
+    func getTotalQaza(userProfile:Profile, completion: @escaping (DocumentSnapshot?) -> ()) {
+        db.collection("qazaCount").document(userProfile.id!).getDocument { (document, error) in
+            if let document = document, document.exists {
+//                TodaySalah.lastDaySalah = TodaySalah(userData: document)
+                TotalQaza.shared = TotalQaza(data: document)
+                completion(document)
+            } else {
+                completion(nil)
+            }
+        }
+    }
+    
     func getQazaCount(userProfile:Profile, salahType: SalahType, completionHandler:  @escaping (Int?) -> ()) {
         db.collection("qazaCount").document(userProfile.id!).getDocument { (document, error) in
             if let document = document, document.exists {
@@ -164,23 +177,22 @@ class SalahFetcher {
         }
     }
     
-    func setQazaCount(userProfile:Profile, todaySalah: TodaySalah, salahType: SalahType, count: Int, completionHandler:  @escaping () -> ()) {
-        getTotalCount(userProfile: userProfile, todaySalah: todaySalah, salahType: salahType) { (count) in
-            self.db.collection("qazaCount").document(userProfile.id!).setData([
-                salahType.getSalahName(): count ?? 0
-            ]) { err in
-                if let err = err {
-                    print("Error updating document: \(err)")
-                } else {
-                    print("Document successfully updated")
-                    completionHandler()
-                }
+    func setQazaCount(userProfile:Profile, salahType: SalahType, count: Int, completionHandler:  @escaping () -> ()) {
+        self.db.collection("qazaCount").document(userProfile.id!).setData([
+            salahType.getSalahName(): count
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+            } else {
+                print("Document successfully updated")
+                completionHandler()
+                SalahFetcher.shared.getTotalQaza(userProfile: Profile.sharedInstance) { (doc) in }
             }
         }
     }
     
     func incDecQazaCount(userProfile:Profile, todaySalah: TodaySalah, salahType: SalahType, isInc: Bool, completionHandler:  @escaping () -> ()) {
-        getTotalCount(userProfile: userProfile, todaySalah: todaySalah, salahType: salahType) { (count) in
+        getQazaCount(userProfile: userProfile, salahType: salahType) { (count) in
             if let count = count {
                 self.db.collection("qazaCount").document(userProfile.id!).updateData([
                     salahType.getSalahName(): count + (isInc ? 1 : -1)
@@ -190,6 +202,7 @@ class SalahFetcher {
                     } else {
                         print("Document successfully updated")
                         completionHandler()
+                        SalahFetcher.shared.getTotalQaza(userProfile: Profile.sharedInstance) { (doc) in }
                     }
                 }
             } else {
@@ -201,6 +214,7 @@ class SalahFetcher {
                     } else {
                         print("Document successfully updated")
                         completionHandler()
+                        SalahFetcher.shared.getTotalQaza(userProfile: Profile.sharedInstance) { (doc) in }
                     }
                 }
             }
