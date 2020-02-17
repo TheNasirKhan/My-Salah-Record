@@ -20,7 +20,10 @@ class QazaVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
         SalahFetcher.shared.getTotalQaza(userProfile: Profile.sharedInstance) { (doc) in
             self.table.reloadData()
         }
@@ -79,9 +82,6 @@ class QazaVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let index = textField.tag - 100
         let indexPath = IndexPath(row: index, section: 0)
         guard let cell = table.cellForRow(at: indexPath) as? QazaCounterCell else { return }
-        
-        
-        
     }
     
     @objc func btnAddRecordAction(_ sender: UIButton) {
@@ -119,10 +119,36 @@ class QazaVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     @objc func btnIncAction(_ sender: UIButton) {
-        
+        incDec(isInc: true, sender: sender)
     }
     
     @objc func btnDecAction(_ sender: UIButton) {
+        incDec(isInc: false, sender: sender)
+    }
+    
+    func incDec(isInc: Bool, sender: UIButton) {
+        let buttonPosition = sender.convert(CGPoint.zero, to: self.table)
+        guard let indexPath = self.table.indexPathForRow(at:buttonPosition) else { return }
+        guard let cell = table.cellForRow(at: indexPath) as? QazaCounterCell else { return }
+        
+        var type = SalahType.fajar
+        
+        switch indexPath.row {
+            case 0: type = .fajar
+            case 1: type = .zohor
+            case 2: type = .asar
+            case 3: type = .maghrib
+            case 4: type = .isha
+        default:
+            type = .fajar
+        }
+        if (Int(cell.lblCount.text ?? "0") ?? 0) + (isInc ? 1 : -1) > 0 {
+            SalahFetcher.shared.setQazaCount(userProfile: Profile.sharedInstance, salahType: type, count: (Int(cell.lblCount.text ?? "0") ?? 0) + 1) {
+                cell.lblCount.text = "\((Int(cell.lblCount.text ?? "0") ?? 0) + (isInc ? 1 : -1))"
+            }
+        } else {
+            //error
+        }
         
     }
     

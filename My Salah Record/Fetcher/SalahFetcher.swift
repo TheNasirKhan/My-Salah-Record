@@ -178,7 +178,7 @@ class SalahFetcher {
     }
     
     func setQazaCount(userProfile:Profile, salahType: SalahType, count: Int, completionHandler:  @escaping () -> ()) {
-        self.db.collection("qazaCount").document(userProfile.id!).setData([
+        self.db.collection("qazaCount").document(userProfile.id!).updateData([
             salahType.getSalahName(): count
         ]) { err in
             if let err = err {
