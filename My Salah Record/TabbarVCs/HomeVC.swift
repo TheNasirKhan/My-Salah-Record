@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 import FirebaseFirestore
 import CoreLocation
+import UserNotifications
 
 class HomeVC : UIViewController {
     
@@ -28,6 +29,37 @@ class HomeVC : UIViewController {
     
     func setup() {
         setupLoginButton()
+        setupLocalNotification()
+        scheduleNotification()
+    }
+    
+    func setupLocalNotification() {
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .badge, .sound]) { (granted, error) in
+            if granted {
+                self.scheduleNotification()
+            } else {
+                print("D'oh")
+            }
+        }
+    }
+    
+    func scheduleNotification() {
+        let center = UNUserNotificationCenter.current()
+        let content = UNMutableNotificationContent()
+        content.title = "Mark Today's Salah"
+        content.body = "Please Mark your Today's Salah as performed."
+        content.categoryIdentifier = "alarm"
+        content.userInfo = ["type": "Today"]
+        content.sound = UNNotificationSound.default
+
+        var dateComponents = DateComponents()
+        dateComponents.hour = 22
+        dateComponents.minute = 00
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+
+        let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
+        center.add(request)
     }
     
     func setupLoginButton() {
